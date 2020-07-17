@@ -23,8 +23,7 @@
     ]
   },
   "dependencies": {
-    "vue": "^3.0.0-beta.24",
-    "vue-jest": "^5.0.0-alpha.1"
+    "vue": "^3.0.0-beta.24"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-beta.24",
@@ -33,6 +32,8 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "vite": "^1.0.0-beta.12",
+    "vitepress": "^0.4.1",
+    "vue-jest": "^5.0.0-alpha.1",
     "yorkie": "^2.0.0"
   }
 }

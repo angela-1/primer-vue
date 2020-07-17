@@ -1,10 +1,15 @@
 <template>
-  <span></span>
+  <pr-icon></pr-icon>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { Icon } from '../../packages/icon'
+
 export default defineComponent({
-  name: 'PrIcon'
+  name: 'Primer',
+  components: {
+    'pr-icon': Icon
+  }
 })
 </script>
