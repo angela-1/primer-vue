@@ -1,0 +1,33 @@
+{
+  "name": "primer-vue",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.ts": [
+      "prettier --parser=typescript --write"
+    ],
+    "*.vue": [
+      "prettier --parser=vue --write"
+    ]
+  },
+  "dependencies": {
+    "vue": "^3.0.0-beta.24"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-beta.24",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "vite": "^1.0.0-beta.12",
+    "yorkie": "^2.0.0"
+  }
+}
