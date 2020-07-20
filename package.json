@@ -23,15 +23,17 @@
     ]
   },
   "dependencies": {
-    "vue": "^3.0.0-beta.24"
+    "@primer/css": "^15.0.0",
+    "vue": "^3.0.0-rc.2"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-beta.24",
+    "@vue/compiler-sfc": "^3.0.0-rc.2",
     "@vue/test-utils": "^2.0.0-beta.0",
     "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
-    "vite": "^1.0.0-beta.12",
+    "sass": "^1.26.10",
+    "vite": "^1.0.0-rc.1",
     "vitepress": "^0.4.1",
     "vue-jest": "^5.0.0-alpha.1",
     "yorkie": "^2.0.0"
