@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
   <div class="container-lg p-5">
+    <HelloWorld msg="Hello Vue 3.0 + Vite" />
     <Primer></Primer>
   </div>
 </template>
