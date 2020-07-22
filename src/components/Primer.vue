@@ -1,21 +1,258 @@
 <template>
-  <pr-icon name="mark-github"></pr-icon>
-  <pr-alert>info</pr-alert>
-  <pr-alert type="success"> <pr-icon name="rocket"></pr-icon>success </pr-alert>
-  <pr-alert type="warn"> <pr-icon name="shield-lock"></pr-icon>warn </pr-alert>
-  <pr-alert type="error" closable>error</pr-alert>
+  <section>
+    <h2>label</h2>
+    <pr-label closable>你好</pr-label>
+    <pr-label title="hello">hello</pr-label>
+    <pr-label>你好</pr-label>
+    <pr-label>你好</pr-label>
+  </section>
+  <section>
+    <h2>alert</h2>
+    <pr-alert>info</pr-alert>
+    <pr-alert type="success">
+      <pr-icon name="rocket"></pr-icon>success
+    </pr-alert>
+    <pr-alert type="warn">
+      <pr-icon name="shield-lock"></pr-icon>warn
+    </pr-alert>
+    <pr-alert type="error" closable>error</pr-alert>
+  </section>
+
+  <section>
+    <h2>octicons</h2>
+    <div class="icon-container">
+      <div v-for="icon in octicons" :key="icon">
+        <pr-icon :name="icon" :size="24"></pr-icon>
+        <span>{{ icon }}</span>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { Icon } from '../../packages/icon'
 import { Alert } from '../../packages/alert'
+import { Label } from '../../packages/label'
 
 export default defineComponent({
   name: 'Primer',
   components: {
     'pr-icon': Icon,
-    'pr-alert': Alert
+    'pr-alert': Alert,
+    'pr-label': Label
+  },
+  setup() {
+    const octicons: string[] = [
+      'alert',
+      'archive',
+      'arrow-both',
+      'arrow-down',
+      'arrow-down-left',
+      'arrow-down-right',
+      'arrow-left',
+      'arrow-right',
+      'arrow-up',
+      'arrow-up-left',
+      'arrow-up-right',
+      'beaker',
+      'bell',
+      'bell-fill',
+      'bell-slash',
+      'bold',
+      'book',
+      'bookmark',
+      'bookmark-fill',
+      'bookmark-slash',
+      'bookmark-slash-fill',
+      'briefcase',
+      'broadcast',
+      'calendar',
+      'check',
+      'check-circle',
+      'check-circle-fill',
+      'checklist',
+      'chevron-down',
+      'chevron-left',
+      'chevron-right',
+      'chevron-up',
+      'circle',
+      'circle-slash',
+      'clippy',
+      'clock',
+      'code',
+      'code-review',
+      'code-square',
+      'comment',
+      'comment-discussion',
+      'commit',
+      'copy',
+      'cpu',
+      'credit-card',
+      'cross-reference',
+      'dash',
+      'database',
+      'desktop-download',
+      'device-camera-video',
+      'device-desktop',
+      'device-mobile',
+      'diff',
+      'dot',
+      'dot-fill',
+      'download',
+      'eye',
+      'eye-slash',
+      'file',
+      'file-binary',
+      'file-code',
+      'file-diff',
+      'file-directory',
+      'file-directory-fill',
+      'file-media',
+      'file-submodule',
+      'file-symlink',
+      'file-zip',
+      'filter',
+      'fire',
+      'fold',
+      'fold-down',
+      'fold-up',
+      'gear',
+      'gift',
+      'git-branch',
+      'git-commit',
+      'git-compare',
+      'git-fork',
+      'git-merge',
+      'git-pull-request',
+      'globe',
+      'grabber',
+      'graph',
+      'heading',
+      'heart',
+      'heart-fill',
+      'history',
+      'home',
+      'home-fill',
+      'horizontal-rule',
+      'hourglass',
+      'hubot',
+      'image',
+      'inbox',
+      'infinity',
+      'info',
+      'insights',
+      'issue-closed',
+      'issue-opened',
+      'issue-reopened',
+      'italic',
+      'kebab-horizontal',
+      'key',
+      'law',
+      'light-bulb',
+      'link',
+      'link-external',
+      'list-ordered',
+      'list-unordered',
+      'location',
+      'lock',
+      'mail',
+      'megaphone',
+      'mention',
+      'milestone',
+      'mirror',
+      'moon',
+      'mortar-board',
+      'mute',
+      'no-entry',
+      'north-star',
+      'note',
+      'organization',
+      'package',
+      'package-dependencies',
+      'package-dependents',
+      'paper-airplane',
+      'pencil',
+      'people',
+      'person',
+      'pin',
+      'play',
+      'plug',
+      'plus',
+      'plus-circle',
+      'project',
+      'pulse',
+      'question',
+      'quote',
+      'reply',
+      'repo',
+      'repo-push',
+      'repo-template',
+      'report',
+      'rocket',
+      'rss',
+      'ruby',
+      'screen-full',
+      'screen-normal',
+      'search',
+      'server',
+      'settings',
+      'share',
+      'share-android',
+      'shield',
+      'shield-check',
+      'shield-lock',
+      'shield-x',
+      'sign-in',
+      'sign-out',
+      'skip',
+      'smiley',
+      'square',
+      'square-fill',
+      'star',
+      'star-fill',
+      'stop',
+      'stopwatch',
+      'sun',
+      'sync',
+      'tab',
+      'tag',
+      'tasklist',
+      'telescope',
+      'terminal',
+      'thumbsdown',
+      'thumbsup',
+      'tools',
+      'trash',
+      'triangle-down',
+      'triangle-left',
+      'triangle-right',
+      'triangle-up',
+      'typography',
+      'unfold',
+      'unlock',
+      'unmute',
+      'unverifed',
+      'upload',
+      'verified',
+      'versions',
+      'workflow',
+      'x',
+      'x-circle',
+      'x-circle-fill',
+      'zap'
+    ]
+
+    return {
+      octicons
+    }
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+</style>
