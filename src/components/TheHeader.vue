@@ -4,8 +4,13 @@
     role="banner"
   >
     <div class="Header-itemd-lg-flex">
-      <a href="/" class="Header-link" aria-label="Homepage ">
+      <a
+        href="/"
+        class="Header-link d-inline-flex flex-items-center"
+        aria-label="Homepage "
+      >
         <img src="../assets/logo.png" alt="logo" height="32" />
+        <span class="f4 ml-2">Primer Vue</span>
       </a>
     </div>
     <div
@@ -16,34 +21,17 @@
         class="d-flex flex-lg-row flex-self-stretch flex-lg-self-auto"
         aria-label="Global"
       >
-        <a
-          class="js-selected-navigation-item Header-link py-lg-3 mr-0 mr-lg-3 py-2 border-top border-lg-top-0 border-white-fade-15"
-          data-hotkey="g p"
-          data-ga-click="Header, click, Nav menu - item:pulls context:user"
-          aria-label="Pull requests you created"
-          data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls"
-          href="/pulls"
-          >日常管理</a
+        <router-link
+          class="Header-link py-3 mr-5"
+          to="/components"
+          active-class="selected"
+          >组件</router-link
         >
-        <a
-          class="js-selected-navigation-item Header-link py-lg-3 mr-0 mr-lg-3 py-2 border-top border-lg-top-0 border-white-fade-15"
-          data-hotkey="g p"
-          data-ga-click="Header, click, Nav menu - item:pulls context:user"
-          aria-label="Pull requests you created"
-          data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls"
-          href="/pulls"
-          >班级管理</a
-        >
-        <a
-          class="js-selected-navigation-item Header-link py-lg-3 mr-0 mr-lg-3 py-2 border-top border-lg-top-0 border-white-fade-15"
-          data-hotkey="g i"
-          data-ga-click="Header, click, Nav menu - item:issues context:user"
-          aria-label="Issues you created"
-          data-selected-links="/issues /issues/assigned /issues/mentioned /issues"
-          href="/issues"
-          >设置</a
-        >
+        <a href="" class="Header-link py-3 mr-5">
+          指南
+        </a>
       </nav>
+      <div class="flex-1"></div>
     </div>
   </header>
 </template>
