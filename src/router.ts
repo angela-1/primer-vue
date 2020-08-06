@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Frame from './layout/Frame.vue'
-import Primer from './components/Primer.vue'
+import Frame from './layouts/Frame.vue'
+import Design from './views/Design.vue'
 
 export const routerHistory = createWebHistory()
 export const router = createRouter({
@@ -12,7 +12,7 @@ export const router = createRouter({
       path: '/components',
       name: 'components',
       component: Frame,
-      children: [{ path: 'primer', name: 'primer', component: Primer }]
+      children: [{ path: 'design', name: 'design', component: Design }]
     }
   ]
 })

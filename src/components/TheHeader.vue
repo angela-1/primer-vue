@@ -23,9 +23,9 @@
       >
         <router-link
           class="Header-link py-3 mr-5"
-          to="/components"
+          to="/components/design"
           active-class="selected"
-          >组件</router-link
+          >设计组件</router-link
         >
         <a href="" class="Header-link py-3 mr-5">
           指南
