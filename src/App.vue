@@ -1,12 +1,15 @@
 <template>
-  <router-view></router-view>
+  <the-frame></the-frame>
+  <!-- <router-view></router-view> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import TheFrame from './layouts/TheFrame.vue'
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  components: { TheFrame }
 })
 </script>
 
