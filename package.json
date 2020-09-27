@@ -23,20 +23,21 @@
     ]
   },
   "dependencies": {
-    "@primer/css": "^15.0.0",
-    "vue": "^3.0.0-rc.5",
+    "@primer/css": "^15.2.0",
+    "@primer/octicons": "^11.0.0",
+    "vue": "^3.0.0",
     "vue-router": "4.0.0-beta.4"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-rc.5",
-    "@vue/test-utils": "^2.0.0-beta.0",
-    "jest": "^26.2.1",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
-    "sass": "^1.26.10",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/test-utils": "^2.0.0-beta.5",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "sass": "^1.26.11",
     "vite": "^1.0.0-rc.4",
     "vitepress": "^0.5.0",
-    "vue-jest": "^5.0.0-alpha.1",
+    "vue-jest": "^5.0.0-alpha.4",
     "yorkie": "^2.0.0"
   }
 }
