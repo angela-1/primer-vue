@@ -1,207 +1,116 @@
 <template>
-  <div>
-    <router-link to="/">
-      <img alt="Vue logo" src="../assets/logo.png" />
-      <span>Azalea</span>
+  <div class="d-flex flex-items-center p-4" style="z-index: 3" id="github-logo">
+    <router-link to="/" class="text-white">
+      <pr-icon name="mark-github" :size="32"></pr-icon>
+    </router-link>
+    <router-link
+      to="/"
+      class="h4-mktg text-white no-underline no-wrap pl-2 flex-auto"
+    >
+      Primer Vue
     </router-link>
   </div>
-  <nav class="bg-white pt-3 pb-6" aria-label="Notifications">
-    <ul class="filter-list js-notification-inboxes">
-      <li>
-        <router-link to="/components/design" class="filter-item">
-          <span class="mr-2 text-center d-inline-block" style="width: 14px;">
-            <Icon name="inbox"></Icon>
-          </span>
-          设计 Design
-        </router-link>
-      </li>
-      <li>
-        <a href="#" class="filter-item">
-          <span class="mr-2 text-center d-inline-block" style="width: 14px;">
-            <Icon name="bookmark"></Icon>
-          </span>
-          Saved
-        </a>
-      </li>
-      <li>
-        <a href="#" class="filter-item">
-          <span class="mr-2 text-center d-inline-block" style="width: 14px;">
-            <Icon name="check"></Icon>
-          </span>
-          Done
-        </a>
-      </li>
-    </ul>
-    <hr />
-    <div class="border-0 py-2 m-0 d-flex" style="padding-right: 7px;">
-      <span class="h6 text-gray pl-2 flex-auto">Filters</span>
-    </div>
-    <ul class="filter-list js-notification-sidebar-filters">
-      <li>
-        <a href="#" class="filter-item">
-          <Icon name="mark-github"></Icon>
-          人员管理
-        </a>
-      </li>
-      <li>
-        <a href="#" class="filter-item">
-          <Icon name="mark-github"></Icon>
-          模板管理
-        </a>
-      </li>
-      <li>
-        <a href="/notifications/beta?query=reason%3Aassign" class="filter-item">
-          <span class="count text-normal"></span>
-          🎯 Assigned
-        </a>
-      </li>
-      <li>
-        <a
-          href="/notifications/beta?query=reason%3Aparticipating"
-          class="filter-item"
-        >
-          <span class="count text-normal"></span>
-          💬 Participating
-        </a>
-      </li>
-      <li>
-        <a
-          href="/notifications/beta?query=reason%3Amention"
-          class="filter-item"
-        >
-          <span class="count text-normal"></span>
-          ✋ Mentioned
-        </a>
-      </li>
-      <li>
-        <a
-          href="/notifications/beta?query=reason%3Ateam-mention"
-          class="filter-item"
-        >
-          <span class="count text-normal"></span>
-          🙌 Team mentioned
-        </a>
-      </li>
-      <li>
-        <a
-          href="/notifications/beta?query=reason%3Areview-requested"
-          class="filter-item"
-        >
-          <span class="count text-normal"></span>
-          👀 Review requested
-        </a>
-      </li>
-    </ul>
 
-    <div class="">
-      <hr />
-      <p class="h6 border-0 text-gray py-2 pl-2 m-0">Repositories</p>
-      <ul class="filter-list">
-        <li>
-          <a class="filter-item">
-            <img
-              class="avatar avatar-small mr-2 v-align-middle"
-              height="16"
-              width="16"
-              alt="@vitejs"
-              src=""
-            />
-            <span class="count text-normal">3</span>
-            vitejs/vite
-          </a>
-        </li>
-        <li>
-          <a class="filter-item">
-            <img
-              class="avatar avatar-small mr-2 v-align-middle"
-              height="16"
-              width="16"
-              alt="@DefinitelyTyped"
-              src=""
-            />
-            <span class="count text-normal"></span>
-            DefinitelyTyped/DefinitelyTyped
-          </a>
-        </li>
-        <li>
-          <a class="filter-item">
-            <img
-              class="avatar avatar-small mr-2 v-align-middle"
-              height="16"
-              width="16"
-              alt="@vueComponent"
-              src=""
-            />
-            <span class="count text-normal"></span>
-            vueComponent/ant-design-vue
-          </a>
-        </li>
-        <li>
-          <a class="filter-item">
-            <img
-              class="avatar avatar-small mr-2 v-align-middle avatar-user"
-              height="16"
-              width="16"
-              alt="@angela-1"
-              src=""
-            />
-            <span class="count text-normal"></span>
-            angela-1/canna
-          </a>
-        </li>
-        <li>
-          <a class="filter-item">
-            <img
-              class="avatar avatar-small mr-2 v-align-middle avatar-user"
-              height="16"
-              width="16"
-              alt="@SteveSandersonMS"
-              src=""
-            />
-            <span class="count text-normal"></span>
-            SteveSandersonMS/WebWindow
-          </a>
-        </li>
-        <li>
-          <a class="filter-item">
-            <img
-              class="avatar avatar-small mr-2 v-align-middle avatar-user"
-              height="16"
-              width="16"
-              alt="@a631807682"
-              src=""
-            />
-            <span class="count text-normal"></span>
-            a631807682/ele-next
-          </a>
-        </li>
-        <li>
-          <a class="filter-item">
-            <img
-              class="avatar avatar-small mr-2 v-align-middle"
-              height="16"
-              width="16"
-              alt="@vuejs"
-              src=""
-            />
-            <span class="count text-normal"></span>
-            vuejs/vitepress
-          </a>
-        </li>
-      </ul>
-    </div>
-    <hr />
-  </nav>
+  <ul class="sidebar-products">
+    <li title="安装" class="sidebar-product mb-2">
+      <a href="/" class="pl-4 pr-5 pb-1 f4"> 安装 </a>
+    </li>
+    <li title="开始使用" class="sidebar-product mb-2">
+      <a href="/" class="pl-4 pr-5 pb-1 f4"> 开始使用 </a>
+    </li>
+    <ul class="sidebar-categories list-style-none">
+      <li class="sidebar-category py-1 active">
+        <details class="dropdown-withArrow details details-reset" open="">
+          <summary>
+            <div class="d-flex flex-justify-between">
+              <a
+                href="/"
+                class="pl-4 pr-2 py-2 f6 text-uppercase d-block flex-auto mr-3"
+                >指南</a
+              >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="octicon flex-shrink-0 arrow mr-3"
+                style="margin-top: 7px"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"
+                ></path>
+              </svg>
+            </div>
+          </summary>
+
+          <!-- some categories have maptopics with child articles -->
+
+          <ul class="sidebar-articles list-style-none">
+            <li class="sidebar-article active is-current-page">
+              <a href="/" class="pl-4 pr-5 py-1"> 生成文档 </a>
+            </li>
+
+            <li class="sidebar-article">
+              <a href="/" class="pl-4 pr-5 py-1"> 模板下载 </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+
+      <li class="sidebar-category py-1">
+        <details class="dropdown-withArrow details details-reset" open="">
+          <summary>
+            <div class="d-flex flex-justify-between">
+              <a
+                href="/"
+                class="pl-4 pr-2 py-2 f6 text-uppercase d-block flex-auto mr-3"
+              >
+                组件
+              </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="octicon flex-shrink-0 arrow mr-3"
+                style="margin-top: 7px"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"
+                ></path>
+              </svg>
+            </div>
+          </summary>
+
+          <!-- some categories have maptopics with child articles -->
+
+          <ul class="sidebar-articles list-style-none">
+            <li class="sidebar-article">
+              <a href="/" class="pl-4 pr-5 py-1"> 节能审查 </a>
+            </li>
+
+            <li class="sidebar-article">
+              <a href="/" class="pl-4 pr-5 py-1"> 专家库 </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </ul>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Icon } from '../../packages/icon'
+import { PrIcon } from '../../packages/icon'
 
 export default defineComponent({
   name: 'TheName',
   components: {
-    Icon
+    PrIcon
   }
 })
 </script>

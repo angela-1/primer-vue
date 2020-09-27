@@ -1,8 +1,7 @@
 import { App } from 'vue'
-import Comp from './alert.vue'
+import Comp from './button.vue'
 export const install = function (app: App) {
   app.component(Comp.name, Comp)
 }
 
-export const Alert = Comp
-export * from './type'
+export const PrButton = Comp

@@ -6,13 +6,22 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-import { ButtonType } from './type'
-import { Icon } from '../icon'
+import { PrIcon } from '../icon'
+
+export type ButtonType =
+  | 'primary'
+  | 'danger'
+  | 'outline'
+  | 'block'
+  | 'link'
+  | 'invisible'
+  | 'octicon'
+export type ButtonSize = 'sm' | 'large'
 
 export default defineComponent({
   name: 'PrAlert',
   components: {
-    'pr-icon': Icon
+    PrIcon
   },
   props: {
     type: {

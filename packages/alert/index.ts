@@ -4,5 +4,4 @@ export const install = function (app: App) {
   app.component(Comp.name, Comp)
 }
 
-export const Alert = Comp
-export * from './type'
+export const PrAlert = Comp

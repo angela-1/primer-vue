@@ -20,12 +20,12 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-import { Icon } from '../icon'
+import { PrIcon } from '../icon'
 
 export default defineComponent({
   name: 'PrLabel',
   components: {
-    'pr-icon': Icon
+    PrIcon
   },
   props: {
     classes: {

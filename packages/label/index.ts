@@ -4,4 +4,4 @@ export const install = function (app: App) {
   app.component(Comp.name, Comp)
 }
 
-export const Label = Comp
+export const PrLabel = Comp

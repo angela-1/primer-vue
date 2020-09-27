@@ -1,31 +1,31 @@
 <template>
-  <section>
-    <h2>button</h2>
-    <div>
-      button
-    </div>
-  </section>
+  <div class="p-5">
+    <section>
+      <h2>button</h2>
+      <div>button</div>
+    </section>
 
-  <section>
-    <h2>icon</h2>
-    <div class="icon-container">
-      <div v-for="icon in octicons" :key="icon" class="mt-5">
-        <Icon :name="icon" :size="24"></Icon>
-        <br />
-        <span>{{ icon }}</span>
+    <section>
+      <h2>icon</h2>
+      <div class="icon-container">
+        <div v-for="icon in octicons" :key="icon" class="mt-5">
+          <pr-icon :name="icon" :size="24"></pr-icon>
+          <br />
+          <span>{{ icon }}</span>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Icon } from '../../packages/icon'
+import { PrIcon } from '../../packages/icon'
 
 export default defineComponent({
   name: 'Design',
   components: {
-    Icon
+    PrIcon
   },
   setup() {
     const octicons: string[] = [

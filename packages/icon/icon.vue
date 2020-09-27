@@ -4,8 +4,14 @@
 
 <script lang="ts">
 import { defineComponent, PropType, ref, Ref } from 'vue'
-import { IconSize, Size } from './type'
 import octicons from '@primer/octicons'
+
+export enum Size {
+  Small = 16,
+  Large = 24
+}
+
+export type IconSize = Size | number
 
 export default defineComponent({
   name: 'PrIcon',

@@ -23,13 +23,11 @@
       >
         <router-link
           class="Header-link py-3 mr-5"
-          to="/components/design"
+          to="/design"
           active-class="selected"
           >设计组件</router-link
         >
-        <a href="" class="Header-link py-3 mr-5">
-          指南
-        </a>
+        <a href="" class="Header-link py-3 mr-5"> 指南 </a>
       </nav>
       <div class="flex-1"></div>
     </div>
