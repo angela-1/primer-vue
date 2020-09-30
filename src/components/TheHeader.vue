@@ -23,7 +23,7 @@
       >
         <router-link
           class="Header-link py-3 mr-5"
-          to="/design"
+          to="/"
           active-class="selected"
           >设计组件</router-link
         >

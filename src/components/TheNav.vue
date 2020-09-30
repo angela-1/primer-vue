@@ -1,5 +1,9 @@
 <template>
-  <div class="d-flex flex-items-center p-4" style="z-index: 3" id="github-logo">
+  <div
+    class="d-flex flex-items-center p-4"
+    style="z-index: 3;"
+    id="github-logo"
+  >
     <router-link to="/" class="text-white">
       <pr-icon name="mark-github" :size="32"></pr-icon>
     </router-link>
@@ -11,6 +15,16 @@
     </router-link>
   </div>
 
+  <pr-side-nav>
+    <pr-side-nav-item>标题1 </pr-side-nav-item>
+    <pr-side-nav-item>标题2</pr-side-nav-item>
+    <pr-side-nav-sub-items title="导航212">
+      <pr-side-nav-item>标题3</pr-side-nav-item>
+      <pr-side-nav-item>标题4</pr-side-nav-item>
+    </pr-side-nav-sub-items>
+  </pr-side-nav>
+
+  <div><a href="">cao</a></div>
   <ul class="sidebar-products">
     <li title="安装" class="sidebar-product mb-2">
       <a href="/" class="pl-4 pr-5 pb-1 f4"> 安装 </a>
@@ -31,7 +45,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="octicon flex-shrink-0 arrow mr-3"
-                style="margin-top: 7px"
+                style="margin-top: 7px;"
                 viewBox="0 0 16 16"
                 width="16"
                 height="16"
@@ -48,7 +62,7 @@
           <!-- some categories have maptopics with child articles -->
 
           <ul class="sidebar-articles list-style-none">
-            <li class="sidebar-article active is-current-page">
+            <li class="sidebar-product active is-current-page">
               <a href="/" class="pl-4 pr-5 py-1"> 生成文档 </a>
             </li>
 
@@ -72,7 +86,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="octicon flex-shrink-0 arrow mr-3"
-                style="margin-top: 7px"
+                style="margin-top: 7px;"
                 viewBox="0 0 16 16"
                 width="16"
                 height="16"
@@ -106,11 +120,17 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { PrIcon } from '../../packages/icon'
+import { PrSideNav } from '../../packages/side-nav'
+import { PrSideNavItem } from '../../packages/side-nav-item'
+import { PrSideNavSubItems } from '../../packages/side-nav-sub-items'
 
 export default defineComponent({
   name: 'TheName',
   components: {
-    PrIcon
+    PrIcon,
+    PrSideNav,
+    PrSideNavItem,
+    PrSideNavSubItems
   }
 })
 </script>
