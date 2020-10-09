@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="tabnav-tab cursor-pointer"
-    :aria-current="isCurrent"
-    @click="submit"
-  >
+  <div class="tabnav-tab cursor-pointer">
     {{ label }}
   </div>
 </template>
@@ -18,34 +14,6 @@ export default defineComponent({
     },
     label: {
       type: String
-    }
-  },
-  setup(props, ctx) {
-    const parent: Ref<any> = inject('parent')
-
-    const isCurrent = computed(() => {
-      console.log('ic', props.name, parent.value)
-
-      return props.name === parent.value.items[parent.value.active]
-        ? 'page'
-        : 'false'
-    })
-
-    const getSelectIndex = (href) => {
-      return parent.value.items.indexOf(href)
-    }
-    onMounted(() => {
-      parent.value.items.push(props.name)
-    })
-
-    const submit = () => {
-      const active = getSelectIndex(props.name)
-      console.log('submit', active, props.name)
-      parent.value.active = active
-    }
-    return {
-      submit,
-      isCurrent
     }
   }
 })

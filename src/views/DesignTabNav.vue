@@ -3,10 +3,10 @@
     <h2>tab-nav</h2>
     <div>
       <pr-tab-nav>
-        <pr-tab-nav-pane name="one" label="测试1">
+        <pr-tab-nav-pane name="sumary" label="概览">
           <design-sumary></design-sumary>
         </pr-tab-nav-pane>
-        <pr-tab-nav-pane name="two" label="测试2">
+        <pr-tab-nav-pane name="detail" label="详情">
           <design-detail></design-detail>
         </pr-tab-nav-pane>
       </pr-tab-nav>
