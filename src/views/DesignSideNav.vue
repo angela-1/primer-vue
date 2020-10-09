@@ -1,15 +1,18 @@
 <template>
-  <section>
-    <h2>side-nav</h2>
-    <div>见左边</div>
-  </section>
+  <the-component>
+    <template #title> side-nav </template>
+    <template #content> 见左边 </template>
+  </the-component>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import TheComponent from '../layouts/TheComponent.vue'
 
 export default defineComponent({
   name: 'DesignSideNav',
-  components: {}
+  components: {
+    TheComponent
+  }
 })
 </script>

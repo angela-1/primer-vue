@@ -1,7 +1,7 @@
 <template>
-  <section>
-    <h2>tab-nav</h2>
-    <div>
+  <the-component>
+    <template #title> tab-nav </template>
+    <template #content>
       <pr-tab-nav>
         <pr-tab-nav-pane name="sumary" label="概览">
           <design-sumary></design-sumary>
@@ -10,8 +10,8 @@
           <design-detail></design-detail>
         </pr-tab-nav-pane>
       </pr-tab-nav>
-    </div>
-  </section>
+    </template>
+  </the-component>
 </template>
 
 <script lang="ts">
@@ -21,6 +21,7 @@ import { PrTabNavItem } from '../../packages/tab-nav-item'
 import { PrTabNavPane } from '../../packages/tab-nav-pane'
 import DesignSumary from './Sumary.vue'
 import DesignDetail from './Detail.vue'
+import TheComponent from '../layouts/TheComponent.vue'
 
 export default defineComponent({
   name: 'DesignTabNav',
@@ -29,7 +30,8 @@ export default defineComponent({
     PrTabNavItem,
     PrTabNavPane,
     DesignSumary,
-    DesignDetail
+    DesignDetail,
+    TheComponent
   }
 })
 </script>
