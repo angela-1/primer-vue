@@ -5,6 +5,8 @@
       <div>button</div>
     </section>
 
+    <design-tab-nav></design-tab-nav>
+
     <section>
       <h2>icon</h2>
       <div class="icon-container">
@@ -21,11 +23,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { PrIcon } from '../../packages/icon'
-
+import DesignTabNav from './DesignTabNav'
 export default defineComponent({
   name: 'Design',
   components: {
-    PrIcon
+    PrIcon,
+    DesignTabNav
   },
   setup() {
     const octicons: string[] = [
