@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tabnav-panes">
     <slot></slot>
   </div>
 </template>

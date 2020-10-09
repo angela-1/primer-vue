@@ -23,7 +23,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { PrIcon } from '../../packages/icon'
-import DesignTabNav from './DesignTabNav'
+import DesignTabNav from './DesignTabNav.vue'
+
 export default defineComponent({
   name: 'Design',
   components: {

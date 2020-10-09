@@ -36,7 +36,10 @@ export default defineComponent({
     })
 
     const currentComponent = computed(() => {
-      return (slots.value[state.value.active].children as Slots).default()
+      console.log('sv', ctx.slots.default()[state.value.active])
+      return ctx.slots.default()[1]
+      // return slots.value[state.value.active].type.name
+      // return (slots.value[state.value.active].children as Slots).default()
     })
 
     const render = () => {
@@ -54,10 +57,16 @@ export default defineComponent({
             tabNavItems.value
           )
         ),
-        h('div', currentComponent.value)
+        currentComponent.value
+        // h('div', currentComponent.value)
       ]
     }
     return render
   }
 })
 </script>
+<style lang="scss">
+.cursor-pointer {
+  cursor: pointer;
+}
+</style>

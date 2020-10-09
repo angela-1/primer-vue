@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="d-flex flex-items-center p-4"
-    style="z-index: 3;"
-    id="github-logo"
-  >
+  <div class="d-flex flex-items-center p-4" style="z-index: 3" id="github-logo">
     <router-link to="/" class="text-white">
       <pr-icon name="mark-github" :size="32"></pr-icon>
     </router-link>
@@ -45,7 +41,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="octicon flex-shrink-0 arrow mr-3"
-                style="margin-top: 7px;"
+                style="margin-top: 7px"
                 viewBox="0 0 16 16"
                 width="16"
                 height="16"
@@ -86,7 +82,7 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="octicon flex-shrink-0 arrow mr-3"
-                style="margin-top: 7px;"
+                style="margin-top: 7px"
                 viewBox="0 0 16 16"
                 width="16"
                 height="16"
