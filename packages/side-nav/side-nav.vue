@@ -21,6 +21,10 @@ export default defineComponent({
       console.log('how much slots', v)
     })
 
+    // 查找第一个子元素，为了设置默认选择项
+    // 递归地查找到第一个子元素
+    // v-for还有template在slots里都是一个fragment
+    // 所以不能按照平常的情况，直接取第一个子元素
     const firstChild = (vnodes: VNode[]): VNode => {
       let element = vnodes.find((v) => {
         return typeof v.type !== 'symbol'
@@ -33,13 +37,14 @@ export default defineComponent({
 
     const findFirstChildName = (): string => {
       const element = firstChild(slots)
-      console.log('zhaodao', element.props)
+      console.log('find first', element.props)
       return element.props.name
     }
 
     const selected = ref(findFirstChildName())
 
     provide('selected', selected)
+
     return {
       selected
     }
