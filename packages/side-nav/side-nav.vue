@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { Component, defineComponent, provide, ref } from 'vue'
+import { Component, defineComponent, Fragment, provide, ref, VNode } from 'vue'
 import PrSideNavItem from './side-nav-item.vue'
 export default defineComponent({
   name: 'PrSideNav',
@@ -15,12 +15,29 @@ export default defineComponent({
   },
   setup(props, ctx) {
     const slots = ctx.slots.default()
+    const isFragment = ref(false)
 
     slots.forEach((v) => {
-      console.log('ts', v.props)
+      console.log('how much slots', v)
     })
 
-    const selected = ref(slots[0].props.name)
+    const firstChild = (vnodes: VNode[], elementName: string): VNode => {
+      let element = vnodes.find((v) => {
+        return typeof v.type !== 'symbol'
+      })
+      if (!element) {
+        element = firstChild(vnodes[0].children as VNode[])
+      }
+      return element
+    }
+
+    const findFirstChildName = (): string => {
+      const element = firstChild(slots)
+      console.log('zhaodao', element.props)
+      return element.props.name
+    }
+
+    const selected = ref(findFirstChildName())
 
     provide('selected', selected)
     return {

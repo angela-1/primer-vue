@@ -1,11 +1,11 @@
 <template>
-  <div class="page-header border-bottom py-2 px-5">
+  <div class="page-header border-bottom py-2 mb-5">
     <h2 class="h2 mb-2">
       <slot name="title"></slot>
     </h2>
     <slot name="toolbar"></slot>
   </div>
-  <div class="p-5">
+  <div>
     <slot name="content"></slot>
   </div>
 </template>

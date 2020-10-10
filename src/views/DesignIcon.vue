@@ -1,6 +1,6 @@
 <template>
   <the-component>
-    <template #title> icons </template>
+    <template #title> icon </template>
     <template #content>
       <div class="icon-container">
         <div v-for="icon in octicons" :key="icon" class="mt-2">
@@ -19,7 +19,7 @@ import { PrIcon } from '../../packages/icon'
 import TheComponent from '../layouts/TheComponent.vue'
 
 export default defineComponent({
-  name: 'DesignIcons',
+  name: 'DesignIcon',
   components: {
     PrIcon,
     TheComponent

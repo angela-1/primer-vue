@@ -17,7 +17,7 @@ import TheComponent from '../layouts/TheComponent.vue'
 import { PrDateRange } from '../../packages/date-range'
 
 export default defineComponent({
-  name: 'Design',
+  name: 'DesignDateRange',
   components: {
     TheComponent,
     PrDateRange

@@ -2,7 +2,7 @@
   <div class="sidebar d-none d-lg-block">
     <the-nav></the-nav>
   </div>
-  <main class="width-full">
+  <main class="width-full p-5">
     <router-view></router-view>
     <the-footer></the-footer>
   </main>
