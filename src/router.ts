@@ -5,6 +5,7 @@ import DesignTabNav from './views/DesignTabNav.vue'
 import DesignSideNav from './views/DesignSideNav.vue'
 import GettingStarted from './views/GettingStarted.vue'
 import UpdateLog from './views/UpdateLog.vue'
+import DesignDateRange from './views/DesignDateRange.vue'
 
 export const routerHistory = createWebHistory()
 export const router = createRouter({
@@ -41,6 +42,11 @@ export const router = createRouter({
       path: '/side-nav',
       name: 'side-nav',
       component: DesignSideNav
+    },
+    {
+      path: '/date-range',
+      name: 'date-range',
+      component: DesignDateRange
     }
   ]
 })

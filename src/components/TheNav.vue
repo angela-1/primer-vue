@@ -26,6 +26,9 @@
       <pr-side-nav-item name="side-nav" href="side-nav">
         侧边导航 SideNav
       </pr-side-nav-item>
+      <pr-side-nav-item name="date-range" href="date-range">
+        日期范围 DateRange
+      </pr-side-nav-item>
     </pr-side-nav-sub-items>
   </pr-side-nav>
 </template>
