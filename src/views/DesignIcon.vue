@@ -231,10 +231,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-.icon-container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-}
-</style>

@@ -1,12 +1,12 @@
 <template>
-  <button class="btn" type="button">
+  <button type="button" :class="btnClass">
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
-import { PrIcon } from '../icon'
+import { computed, defineComponent, PropType } from 'vue'
+import { PrComponentSize, getSizeSuffix } from '../types/component-size'
 
 export type ButtonType =
   | 'primary'
@@ -16,20 +16,51 @@ export type ButtonType =
   | 'link'
   | 'invisible'
   | 'octicon'
-export type ButtonSize = 'sm' | 'large'
+  | ''
 
 export default defineComponent({
-  name: 'PrAlert',
-  components: {
-    PrIcon
-  },
+  name: 'PrButton',
   props: {
     type: {
-      type: String as PropType<ButtonType>
+      type: String as PropType<ButtonType>,
+      default: '' as ButtonType,
+      validator: (val: string): boolean =>
+        [
+          'primary',
+          'danger',
+          'outline',
+          'block',
+          'link',
+          'invisible',
+          'octicon',
+          ''
+        ].includes(val)
     },
-    closable: {
-      type: Boolean,
-      default: false
+    size: {
+      type: String as PropType<PrComponentSize>,
+      default: 'default' as PrComponentSize,
+      validator: (val: string): boolean =>
+        ['small', 'default', 'large'].includes(val)
+    }
+  },
+  setup(props, ctx) {
+    const btnClass = computed(() => {
+      const classList = ['btn']
+
+      const sizeSuffix = getSizeSuffix(props.size)
+      if (sizeSuffix !== '') {
+        classList.push(`btn-${sizeSuffix}`)
+      }
+
+      if (props.type !== '') {
+        const typeClass = `btn-${props.type}`
+        classList.push(typeClass)
+      }
+
+      return classList.join(' ')
+    })
+    return {
+      btnClass
     }
   }
 })

@@ -21,9 +21,3 @@ export default defineComponent({
   setup() {}
 })
 </script>
-
-<style lang="scss">
-section h2 {
-  margin: 16px 0;
-}
-</style>
