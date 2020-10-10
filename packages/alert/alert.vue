@@ -15,12 +15,12 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { AlertType } from './type'
-import { Icon } from '../icon'
+import { PrIcon } from '../icon'
 
 export default defineComponent({
   name: 'PrAlert',
   components: {
-    'pr-icon': Icon
+    PrIcon
   },
   props: {
     type: {
