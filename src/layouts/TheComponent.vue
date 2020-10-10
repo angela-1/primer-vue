@@ -1,12 +1,14 @@
 <template>
-  <div class="page-header border-bottom py-2 mb-5">
-    <h2 class="h2 mb-2">
-      <slot name="title"></slot>
-    </h2>
-    <slot name="toolbar"></slot>
-  </div>
-  <div>
-    <slot name="content"></slot>
+  <div class="p-5">
+    <div class="page-header border-bottom mb-5">
+      <h2 class="h2 mb-2">
+        <slot name="title"></slot>
+      </h2>
+      <slot name="toolbar"></slot>
+    </div>
+    <div>
+      <slot name="content"></slot>
+    </div>
   </div>
 </template>
 

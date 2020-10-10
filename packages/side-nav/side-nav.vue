@@ -21,7 +21,7 @@ export default defineComponent({
       console.log('how much slots', v)
     })
 
-    const firstChild = (vnodes: VNode[], elementName: string): VNode => {
+    const firstChild = (vnodes: VNode[]): VNode => {
       let element = vnodes.find((v) => {
         return typeof v.type !== 'symbol'
       })

@@ -11,12 +11,9 @@ import DesignDateRange from '../views/DesignDateRange.vue'
 import DesignPagination from '../views/DesignPagination.vue'
 
 export const routes: RouteRecordRaw[] = [
+  // 重定向的路由不能有name，会造成无限调用
   {
     path: '/',
-    name: 'home',
-    meta: {
-      title: '主页'
-    },
     redirect: '/design'
   },
   {

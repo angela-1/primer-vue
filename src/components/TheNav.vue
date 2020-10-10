@@ -11,11 +11,7 @@
     </router-link>
   </div>
   <pr-side-nav>
-    <template v-for="route in routes" :key="route.name">
-      <!-- <pr-side-nav-item :name="route.name" :href="route.path">
-        {{ route.meta.title }}
-      </pr-side-nav-item> -->
-
+    <template v-for="route in filterdRoutes" :key="route.name">
       <template v-if="!!route.children">
         <pr-side-nav-sub-items :name="route.name" :title="route.meta.title">
           <pr-side-nav-item
@@ -35,31 +31,10 @@
       </template>
     </template>
   </pr-side-nav>
-
-  <!-- <pr-side-nav>
-    <pr-side-nav-item name="getting-started" href="getting-started">
-      开始使用
-    </pr-side-nav-item>
-    <pr-side-nav-item name="update-log" href="update-log">
-      更新日志
-    </pr-side-nav-item>
-    <pr-side-nav-sub-items name="sub-items" title="组件">
-      <pr-side-nav-item name="icons" href="icons"> 图标 Icon </pr-side-nav-item>
-      <pr-side-nav-item name="tab-nav" href="tab-nav">
-        标签导航 TabNav
-      </pr-side-nav-item>
-      <pr-side-nav-item name="side-nav" href="side-nav">
-        侧边导航 SideNav
-      </pr-side-nav-item>
-      <pr-side-nav-item name="date-range" href="date-range">
-        日期范围 DateRange
-      </pr-side-nav-item>
-    </pr-side-nav-sub-items>
-  </pr-side-nav> -->
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { PrIcon } from '../../packages/icon'
 import { PrSideNav } from '../../packages/side-nav'
 import { PrSideNavItem } from '../../packages/side-nav-item'
@@ -75,9 +50,11 @@ export default defineComponent({
   },
   setup() {
     console.log('rts', routes)
-
+    const filterdRoutes = computed(() => {
+      return routes.filter((v) => !!v.meta)
+    })
     return {
-      routes
+      filterdRoutes
     }
   }
 })

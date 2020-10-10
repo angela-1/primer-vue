@@ -33,8 +33,8 @@ export default defineComponent({
     })
 
     const handleClick = (event: any, navigate: Function) => {
-      event.preventDefault()
       console.log('click', props.name, props.to)
+      event.preventDefault()
       selected.value = props.name
       navigate()
     }
