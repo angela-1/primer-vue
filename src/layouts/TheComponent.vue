@@ -1,9 +1,9 @@
 <template>
   <div class="p-5">
     <div class="page-header border-bottom mb-5">
-      <h2 class="h2 mb-2">
+      <h1 class="h1 mb-2">
         <slot name="title"></slot>
-      </h2>
+      </h1>
       <slot name="toolbar"></slot>
     </div>
     <div>

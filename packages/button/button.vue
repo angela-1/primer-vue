@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="btnClass">
+  <button type="button" :class="btnClass" :aria-disabled="disabled">
     <slot></slot>
   </button>
 </template>
@@ -41,10 +41,15 @@ export default defineComponent({
       default: 'default' as PrComponentSize,
       validator: (val: string): boolean =>
         ['small', 'default', 'large'].includes(val)
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, ctx) {
     const btnClass = computed(() => {
+      const withOutBtnClassTypes = ['link', 'octicon']
       const classList = ['btn']
 
       const sizeSuffix = getSizeSuffix(props.size)
@@ -57,6 +62,10 @@ export default defineComponent({
         classList.push(typeClass)
       }
 
+      if (withOutBtnClassTypes.includes(props.type)) {
+        classList.shift()
+      }
+
       return classList.join(' ')
     })
     return {
@@ -65,3 +74,13 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss">
+.btn .icon:only-child {
+  margin-right: 0px;
+  // vertical-align: text-bottom;
+}
+.btn > *:not(:last-child) {
+  margin-right: 4px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <span :innerHTML="svg"></span>
+  <span class="icon" :innerHTML="svg"></span>
 </template>
 
 <script lang="ts">
