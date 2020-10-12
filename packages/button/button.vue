@@ -78,9 +78,9 @@ export default defineComponent({
 <style lang="scss">
 .btn .icon:only-child {
   margin-right: 0px;
-  // vertical-align: text-bottom;
 }
-.btn > *:not(:last-child) {
-  margin-right: 4px;
+
+.btn > *:not(:first-child) {
+  margin-left: 4px;
 }
 </style>
