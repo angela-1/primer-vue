@@ -57,6 +57,37 @@
           <pr-icon name="device-desktop"></pr-icon>
           <span>Open in Desktop</span>
         </pr-button>
+        <pr-button type="outline">
+          <pr-icon name="pencil"></pr-icon>
+        </pr-button>
+        <h2>Button with counter</h2>
+        <pr-button type="outline">
+          Counter Button <span class="Counter">12</span>
+        </pr-button>
+        <h2>Button groups</h2>
+        <pr-button-group>
+          <pr-button>
+            <pr-icon name="device-desktop"></pr-icon>
+            <span>Open in Desktop</span>
+          </pr-button>
+          <pr-button>
+            <pr-icon name="pencil"></pr-icon>
+          </pr-button>
+          <pr-button>
+            Counter Button <span class="Counter">12</span>
+          </pr-button>
+        </pr-button-group>
+        <pr-button-group>
+          <pr-button>
+            <pr-icon name="pencil"></pr-icon>
+          </pr-button>
+          <pr-button>
+            <pr-icon name="trash"></pr-icon>
+          </pr-button>
+          <pr-button>
+            <pr-icon name="download"></pr-icon>
+          </pr-button>
+        </pr-button-group>
       </div>
     </template>
   </the-component>
@@ -66,6 +97,7 @@
 import { defineComponent, reactive, toRefs } from 'vue'
 import TheComponent from '../layouts/TheComponent.vue'
 import { PrButton } from '../../packages/button'
+import { PrButtonGroup } from '../../packages/button-group'
 import { PrIcon } from '../../packages/icon'
 
 export default defineComponent({
@@ -73,6 +105,7 @@ export default defineComponent({
   components: {
     TheComponent,
     PrButton,
+    PrButtonGroup,
     PrIcon
   },
   setup() {}

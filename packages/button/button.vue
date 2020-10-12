@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from 'vue'
+import { computed, defineComponent, inject, PropType } from 'vue'
 import { PrComponentSize, getSizeSuffix } from '../types/component-size'
 
 export type ButtonType =
@@ -48,26 +48,37 @@ export default defineComponent({
     }
   },
   setup(props, ctx) {
+    const isGroup = inject('btn-group', false)
+
+    const sizeClass = computed(() => {
+      const sizeSuffix = getSizeSuffix(props.size)
+      return sizeSuffix !== '' ? `btn-${sizeSuffix}` : null
+    })
+
+    const typeClass = computed(() => {
+      return props.type !== '' ? `btn-${props.type}` : null
+    })
+
+    const groupItemClass = computed(() => {
+      return isGroup ? 'BtnGroup-item' : null
+    })
+
     const btnClass = computed(() => {
       const withOutBtnClassTypes = ['link', 'octicon']
       const classList = ['btn']
 
-      const sizeSuffix = getSizeSuffix(props.size)
-      if (sizeSuffix !== '') {
-        classList.push(`btn-${sizeSuffix}`)
-      }
+      classList.push(sizeClass.value)
+      classList.push(typeClass.value)
+      classList.push(groupItemClass.value)
 
-      if (props.type !== '') {
-        const typeClass = `btn-${props.type}`
-        classList.push(typeClass)
-      }
+      const result = classList.filter((v) => v)
 
       if (withOutBtnClassTypes.includes(props.type)) {
-        classList.shift()
+        result.shift()
       }
-
-      return classList.join(' ')
+      return result.join(' ')
     })
+
     return {
       btnClass
     }
@@ -80,7 +91,11 @@ export default defineComponent({
   margin-right: 0px;
 }
 
-.btn > *:not(:first-child) {
-  margin-left: 4px;
+.btn .icon {
+  margin-right: 6px;
+}
+
+.btn .dropdown-caret {
+  margin-left: 8px !important;
 }
 </style>
