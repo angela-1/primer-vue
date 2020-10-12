@@ -29,27 +29,31 @@ export default defineComponent({
     const svg: Ref<string> = ref('')
 
     const getSize = (size: string | number): number => {
-      let sizeNumber = Size.Small
-      if (typeof size === 'string') {
-        switch (size) {
-          case 'small':
-            sizeNumber = Size.Small
-            break
-          case 'large':
-            sizeNumber = Size.Large
-            break
-          default:
-            sizeNumber = Size.Small
-            break
+      let sizeNumber = Number(size)
+      const notNumber = sizeNumber === NaN
+      if (notNumber) {
+        if (typeof size === 'string') {
+          switch (size) {
+            case 'small':
+              sizeNumber = Size.Small
+              break
+            case 'large':
+              sizeNumber = Size.Large
+              break
+            default:
+              sizeNumber = Size.Small
+              break
+          }
         }
-      } else {
-        sizeNumber = size
       }
       return sizeNumber
     }
 
     const getSvg = () => {
-      return octicons[props.name]?.toSVG({ height: getSize(props.size) })
+      const height = getSize(props.size)
+      console.log('ht', height)
+
+      return octicons[props.name]?.toSVG({ height })
     }
 
     svg.value = getSvg()

@@ -3,8 +3,13 @@
     <template #title> icon </template>
     <template #content>
       <div class="icon-container">
-        <div v-for="icon in octicons" :key="icon" class="mt-2">
-          <pr-icon :name="icon" :size="24"></pr-icon>
+        <div
+          v-for="icon in octicons"
+          :key="icon"
+          class="mt-2 cursor-pointer"
+          @click="copyIcon(icon)"
+        >
+          <pr-icon :name="icon" size="36"></pr-icon>
           <br />
           <span>{{ icon }}</span>
         </div>
@@ -225,9 +230,38 @@ export default defineComponent({
       'zap'
     ]
 
+    const copyIcon = (val: string) => {
+      console.log('copy icon', val)
+      copyToClipboard(`<pr-icon name="${val}" size="16"></pr-icon>`)
+    }
+
+    /**
+     * 新api复制文字到剪贴板
+     * @param copyText 要复制的文字
+     */
+    const copyToClipboard = (copyText: string): void => {
+      navigator.clipboard
+        .writeText(copyText)
+        .then((_) => {
+          alert('已复制到剪贴板')
+        })
+        .catch((err) => {
+          alert('复制失败')
+          console.error(err)
+        })
+    }
+
     return {
-      octicons
+      octicons,
+      copyIcon
     }
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+</style>
