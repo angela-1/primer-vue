@@ -73,6 +73,9 @@
           <pr-button>
             <pr-icon name="pencil"></pr-icon>
           </pr-button>
+          <form>
+            <pr-button> Button in a form </pr-button>
+          </form>
           <pr-button>
             Counter Button <span class="Counter">12</span>
           </pr-button>
