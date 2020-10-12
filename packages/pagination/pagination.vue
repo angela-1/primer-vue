@@ -10,19 +10,19 @@
             <span
               class="previous_page"
               :aria-disabled="pageNum.disabled"
-              aria-label="Previous"
+              aria-label="上一页"
             >
-              Previous
+              上一页
             </span>
           </template>
           <template v-else>
             <a
               rel="prev"
               @click="onPageChange(pageNum.num)"
-              aria-label="Previous"
+              aria-label="上一页"
               class="previous_page"
             >
-              Previous
+              上一页
             </a>
           </template>
         </template>
@@ -49,19 +49,19 @@
             <span
               class="next_page"
               :aria-disabled="pageNum.disabled"
-              aria-label="Next"
+              aria-label="下一页"
             >
-              Next
+              下一页
             </span>
           </template>
           <template v-else>
             <a
               rel="next"
               @click="onPageChange(pageNum.num)"
-              aria-label="Next"
+              aria-label="下一页"
               class="next_page"
             >
-              Next
+              下一页
             </a>
           </template>
         </template>

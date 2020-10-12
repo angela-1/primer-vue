@@ -2,6 +2,7 @@
   <the-component>
     <template #title> date-range </template>
     <template #content>
+      <p>Date range：{{ from }} - {{ to }}</p>
       <pr-date-range
         :from="from"
         :to="to"
