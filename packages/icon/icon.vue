@@ -30,8 +30,7 @@ export default defineComponent({
 
     const getSize = (size: string | number): number => {
       let sizeNumber = Number(size)
-      const notNumber = sizeNumber === NaN
-      if (notNumber) {
+      if (isNaN(sizeNumber)) {
         if (typeof size === 'string') {
           switch (size) {
             case 'small':
