@@ -31,14 +31,15 @@ const getSizeSuffix = (componentSize: PrComponentSize): string => {
 
 ## components
 
-- [ ] icon
-- [ ] button
 - [ ] alert
+- [ ] button
+- [ ] date-range
+- [ ] icon
 - [ ] label
+- [ ] pagination
+- [ ] progress
 - [ ] side-nav
 - [ ] tab-nav
-- [ ] pagination
-- [ ] date-range
 
 ## tasks
 
