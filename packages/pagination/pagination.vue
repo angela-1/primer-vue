@@ -99,8 +99,6 @@ export default defineComponent({
   },
   emits: ['page-change'],
   setup(props, ctx) {
-    console.log('add', add(1, 3))
-
     const current = ref(props.currentPage)
     /**
      * 生成翻页组件数据，函数直接从@primer/component复制过来
