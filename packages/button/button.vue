@@ -51,7 +51,7 @@ export default defineComponent({
     const isGroup = inject('btn-group', false)
 
     const sizeClass = computed(() => {
-      const sizeSuffix = getSizeSuffix(props.size)
+      const sizeSuffix = getSizeSuffix(props.size, 'button')
       return sizeSuffix !== '' ? `btn-${sizeSuffix}` : null
     })
 

@@ -16,7 +16,7 @@ import {
   ref
 } from 'vue'
 import { PrButton } from '.'
-import { PrComponentSize, getSizeSuffix } from '../types/component-size'
+import { PrComponentSize } from '../types/component-size'
 
 export default defineComponent({
   name: 'PrButtonGroup',

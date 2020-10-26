@@ -7,6 +7,7 @@
         <pr-button>Button button</pr-button>
         <h2>Primary button</h2>
         <pr-button type="primary">Primary button</pr-button>
+        <pr-button type="primary" size="small">Small primary button</pr-button>
         <h2>Danger button</h2>
         <pr-button type="danger">Danger button</pr-button>
         <h2>Outline button</h2>

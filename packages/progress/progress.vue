@@ -44,7 +44,7 @@ export default defineComponent({
       return `bg-${props.backgroundColor}`
     })
     const sizeClass = computed(() => {
-      const sizeSuffix = getSizeSuffix(props.size)
+      const sizeSuffix = getSizeSuffix(props.size, 'progress')
       return sizeSuffix !== '' ? `Progress--${sizeSuffix}` : null
     })
 
