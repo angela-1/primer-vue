@@ -11,6 +11,7 @@ import DesignDateRange from '../views/DesignDateRange.vue'
 import DesignPagination from '../views/DesignPagination.vue'
 import DesignButton from '../views/DesignButton.vue'
 import DesignProgress from '../views/DesignProgress.vue'
+import DesignBreadcrumb from '../views/DesignBreadcrumb.vue'
 
 export const routes: RouteRecordRaw[] = [
   // 重定向的路由不能有name，会造成无限调用
@@ -105,6 +106,14 @@ export const routes: RouteRecordRaw[] = [
           title: '进度条 Progress'
         },
         component: DesignProgress
+      },
+      {
+        path: 'breadcrumb',
+        name: 'breadcrumb',
+        meta: {
+          title: '面包屑 Breadcrumb'
+        },
+        component: DesignBreadcrumb
       }
     ]
   }
