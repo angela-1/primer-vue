@@ -1,0 +1,1 @@
+<template>breadcrumb-item</template>
