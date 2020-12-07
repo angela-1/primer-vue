@@ -50,6 +50,7 @@ export const routes: RouteRecordRaw[] = [
       title: '组件'
     },
     component: TheNested,
+    redirect: 'icon',
     children: [
       {
         path: 'icon',
