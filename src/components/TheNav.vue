@@ -10,43 +10,43 @@
       Primer Vue
     </router-link>
   </div>
-  <pr-side-nav>
+  <pr-sidenav>
     <template v-for="route in filterdRoutes" :key="route.name">
       <template v-if="!!route.children">
-        <pr-side-nav-sub-items :name="route.name" :title="route.meta.title">
-          <pr-side-nav-item
+        <pr-sidenav-subitems :name="route.name" :title="route.meta.title">
+          <pr-sidenav-item
             v-for="child in route.children"
             :key="child.name"
             :name="child.name"
             :to="route.path + '/' + child.path"
           >
             {{ child.meta.title }}
-          </pr-side-nav-item>
-        </pr-side-nav-sub-items>
+          </pr-sidenav-item>
+        </pr-sidenav-subitems>
       </template>
       <template v-else>
-        <pr-side-nav-item :name="route.name" :to="route.path">
+        <pr-sidenav-item :name="route.name" :to="route.path">
           {{ route.meta.title }}
-        </pr-side-nav-item>
+        </pr-sidenav-item>
       </template>
     </template>
-  </pr-side-nav>
+  </pr-sidenav>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { PrIcon } from '../../packages/icon'
-import { PrSideNav } from '../../packages/side-nav'
-import { PrSideNavItem } from '../../packages/side-nav-item'
-import { PrSideNavSubItems } from '../../packages/side-nav-sub-items'
+import { PrSidenav } from '../../packages/sidenav'
+import { PrSidenavItem } from '../../packages/sidenav-item'
+import { PrSidenavSubitems } from '../../packages/sidenav-subitems'
 import { routes } from '../router/routes'
 export default defineComponent({
   name: 'TheNav',
   components: {
     PrIcon,
-    PrSideNav,
-    PrSideNavItem,
-    PrSideNavSubItems
+    PrSidenav,
+    PrSidenavItem,
+    PrSidenavSubitems
   },
   setup() {
     console.log('rts', routes)

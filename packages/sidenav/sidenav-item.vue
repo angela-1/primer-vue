@@ -15,7 +15,7 @@
 <script lang="ts">
 import { computed, defineComponent, inject, Ref, ref } from 'vue'
 export default defineComponent({
-  name: 'PrSideNavItem',
+  name: 'PrSidenavItem',
   props: {
     to: {
       type: [String, Object],

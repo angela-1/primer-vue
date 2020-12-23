@@ -1,24 +1,35 @@
 <template>
-  <ul class="sidebar-products">
+  <nav class="subnav" aria-label="Respository">
+    <!-- <a class="subnav-item" href="#url" aria-current="page">Item 1</a>
+    <a class="subnav-item" href="#url">Item 2</a>
+    <a class="subnav-item" href="#url">Item 3</a> -->
     <slot></slot>
-  </ul>
-  <div class="text-white">{{ selected }}</div>
+  </nav>
 </template>
 
 <script lang="ts">
-import { Component, defineComponent, Fragment, provide, ref, VNode } from 'vue'
-import PrSideNavItem from './side-nav-item.vue'
+import {
+  Component,
+  defineComponent,
+  Fragment,
+  provide,
+  ref,
+  VNode,
+  watchEffect
+} from 'vue'
+import PrSubnavItem from './subnav-item.vue'
 export default defineComponent({
-  name: 'PrSideNav',
+  name: 'PrSubnav',
   components: {
-    PrSideNavItem
+    PrSubnavItem
   },
+  emits: ['change'],
   setup(props, ctx) {
     const slots = ctx.slots.default()
     const isFragment = ref(false)
 
     slots.forEach((v) => {
-      console.log('how much slots', v)
+      console.log('how subnav slots', v)
     })
 
     // 查找第一个子元素，为了设置默认选择项
@@ -37,13 +48,17 @@ export default defineComponent({
 
     const findFirstChildName = (): string => {
       const element = firstChild(slots)
-      console.log('find first', element.props)
+      console.log('find subnav first', element.props)
       return element.props.name
     }
 
     const selected = ref(findFirstChildName())
 
     provide('selected', selected)
+
+    watchEffect(() => {
+      ctx.emit('change', selected.value)
+    })
 
     return {
       selected

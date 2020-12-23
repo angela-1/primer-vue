@@ -35,7 +35,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'PrSideNavSubItems',
+  name: 'PrSidenavSubitems',
   props: {
     title: {
       type: String,

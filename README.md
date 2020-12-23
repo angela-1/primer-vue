@@ -38,8 +38,8 @@ const getSizeSuffix = (componentSize: PrComponentSize): string => {
 - [ ] label
 - [ ] pagination
 - [ ] progress
-- [ ] side-nav
-- [ ] tab-nav
+- [ ] sidenav
+- [ ] tabnav
 
 ## tasks
 

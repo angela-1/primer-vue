@@ -1,13 +1,13 @@
 <template>
-  <div class="tabnav-panes">
-    <slot></slot>
+  <div class="tabnav-tab cursor-pointer">
+    {{ label }}
   </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, inject, onMounted, Ref } from 'vue'
 export default defineComponent({
-  name: 'PrTabNavPane',
+  name: 'PrTabnavItem',
   props: {
     name: {
       type: String

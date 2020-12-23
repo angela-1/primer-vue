@@ -2844,11 +2844,11 @@ a.tabnav-extra:hover {
   background-color: #eff3f6
 }
 
-.SideNav {
+.Sidenav {
   background-color: #fafbfc
 }
 
-.SideNav-item {
+.Sidenav-item {
   position: relative;
   display: block;
   width: 100%;
@@ -2860,15 +2860,15 @@ a.tabnav-extra:hover {
   border-top: 1px solid #eaecef
 }
 
-.SideNav-item:first-child {
+.Sidenav-item:first-child {
   border-top: 0
 }
 
-.SideNav-item:last-child {
+.Sidenav-item:last-child {
   box-shadow: 0 1px 0 #e1e4e8
 }
 
-.SideNav-item::before {
+.Sidenav-item::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2879,31 +2879,31 @@ a.tabnav-extra:hover {
   content: ""
 }
 
-.SideNav-item:hover,.SideNav-item:focus {
+.Sidenav-item:hover,.Sidenav-item:focus {
   text-decoration: none;
   background-color: #f6f8fa;
   outline: none
 }
 
-.SideNav-item:active {
+.Sidenav-item:active {
   background-color: #fafbfc
 }
 
-.SideNav-item[aria-current]:not([aria-current=false]),.SideNav-item[aria-selected=true] {
+.Sidenav-item[aria-current]:not([aria-current=false]),.Sidenav-item[aria-selected=true] {
   background-color: #fff
 }
 
-.SideNav-item[aria-current]:not([aria-current=false])::before,.SideNav-item[aria-selected=true]::before {
+.Sidenav-item[aria-current]:not([aria-current=false])::before,.Sidenav-item[aria-selected=true]::before {
   background-color: #f9826c
 }
 
-.SideNav-icon {
+.Sidenav-icon {
   width: 16px;
   margin-right: 8px;
   color: #6a737d
 }
 
-.SideNav-subItem {
+.Sidenav-subItem {
   position: relative;
   display: block;
   width: 100%;
@@ -2914,13 +2914,13 @@ a.tabnav-extra:hover {
   border: 0
 }
 
-.SideNav-subItem:hover,.SideNav-subItem:focus {
+.Sidenav-subItem:hover,.Sidenav-subItem:focus {
   color: #24292e;
   text-decoration: none;
   outline: none
 }
 
-.SideNav-subItem[aria-current]:not([aria-current=false]),.SideNav-subItem[aria-selected=true] {
+.Sidenav-subItem[aria-current]:not([aria-current=false]),.Sidenav-subItem[aria-selected=true] {
   font-weight: 500;
   color: #24292e
 }
@@ -11036,11 +11036,11 @@ a.tabnav-extra:hover {
   background-color: #eff3f6
 }
 
-.SideNav {
+.Sidenav {
   background-color: #fafbfc
 }
 
-.SideNav-item {
+.Sidenav-item {
   position: relative;
   display: block;
   width: 100%;
@@ -11052,15 +11052,15 @@ a.tabnav-extra:hover {
   border-top: 1px solid #eaecef
 }
 
-.SideNav-item:first-child {
+.Sidenav-item:first-child {
   border-top: 0
 }
 
-.SideNav-item:last-child {
+.Sidenav-item:last-child {
   box-shadow: 0 1px 0 #e1e4e8
 }
 
-.SideNav-item::before {
+.Sidenav-item::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -11071,31 +11071,31 @@ a.tabnav-extra:hover {
   content: ""
 }
 
-.SideNav-item:hover,.SideNav-item:focus {
+.Sidenav-item:hover,.Sidenav-item:focus {
   text-decoration: none;
   background-color: #f6f8fa;
   outline: none
 }
 
-.SideNav-item:active {
+.Sidenav-item:active {
   background-color: #fafbfc
 }
 
-.SideNav-item[aria-current]:not([aria-current=false]),.SideNav-item[aria-selected=true] {
+.Sidenav-item[aria-current]:not([aria-current=false]),.Sidenav-item[aria-selected=true] {
   background-color: #fff
 }
 
-.SideNav-item[aria-current]:not([aria-current=false])::before,.SideNav-item[aria-selected=true]::before {
+.Sidenav-item[aria-current]:not([aria-current=false])::before,.Sidenav-item[aria-selected=true]::before {
   background-color: #f9826c
 }
 
-.SideNav-icon {
+.Sidenav-icon {
   width: 16px;
   margin-right: 8px;
   color: #6a737d
 }
 
-.SideNav-subItem {
+.Sidenav-subItem {
   position: relative;
   display: block;
   width: 100%;
@@ -11106,13 +11106,13 @@ a.tabnav-extra:hover {
   border: 0
 }
 
-.SideNav-subItem:hover,.SideNav-subItem:focus {
+.Sidenav-subItem:hover,.Sidenav-subItem:focus {
   color: #24292e;
   text-decoration: none;
   outline: none
 }
 
-.SideNav-subItem[aria-current]:not([aria-current=false]),.SideNav-subItem[aria-selected=true] {
+.Sidenav-subItem[aria-current]:not([aria-current=false]),.Sidenav-subItem[aria-selected=true] {
   font-weight: 500;
   color: #24292e
 }

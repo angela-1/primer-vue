@@ -1,6 +1,6 @@
 <template>
   <the-component>
-    <template #title> side-nav </template>
+    <template #title> sidenav </template>
     <template #content> 见左边 </template>
   </the-component>
 </template>
@@ -10,7 +10,7 @@ import { defineComponent } from 'vue'
 import TheComponent from '../layouts/TheComponent.vue'
 
 export default defineComponent({
-  name: 'DesignSideNav',
+  name: 'DesignSidenav',
   components: {
     TheComponent
   }

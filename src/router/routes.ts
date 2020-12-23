@@ -2,8 +2,8 @@ import { RouteRecordRaw } from 'vue-router'
 
 import Design from '../views/Design.vue'
 import DesignIcon from '../views/DesignIcon.vue'
-import DesignTabNav from '../views/DesignTabNav.vue'
-import DesignSideNav from '../views/DesignSideNav.vue'
+import DesignTabnav from '../views/DesignTabnav.vue'
+import DesignSidenav from '../views/DesignSidenav.vue'
 import GettingStarted from '../views/GettingStarted.vue'
 import UpdateLog from '../views/UpdateLog.vue'
 import TheNested from '../layouts/TheNested.vue'
@@ -12,6 +12,7 @@ import DesignPagination from '../views/DesignPagination.vue'
 import DesignButton from '../views/DesignButton.vue'
 import DesignProgress from '../views/DesignProgress.vue'
 import DesignBreadcrumb from '../views/DesignBreadcrumb.vue'
+import DesignSubnav from '../views/DesignSubnav.vue'
 
 export const routes: RouteRecordRaw[] = [
   // 重定向的路由不能有name，会造成无限调用
@@ -61,20 +62,20 @@ export const routes: RouteRecordRaw[] = [
         component: DesignIcon
       },
       {
-        path: 'tab-nav',
-        name: 'tab-nav',
+        path: 'tabnav',
+        name: 'tabnav',
         meta: {
-          title: '标签导航 TabNav'
+          title: '标签导航 Tabnav'
         },
-        component: DesignTabNav
+        component: DesignTabnav
       },
       {
-        path: 'side-nav',
-        name: 'side-nav',
+        path: 'sidenav',
+        name: 'sidenav',
         meta: {
-          title: '侧边导航 SideNav'
+          title: '侧边导航 Sidenav'
         },
-        component: DesignSideNav
+        component: DesignSidenav
       },
       {
         path: 'date-range',
@@ -115,6 +116,14 @@ export const routes: RouteRecordRaw[] = [
           title: '面包屑 Breadcrumb'
         },
         component: DesignBreadcrumb
+      },
+      {
+        path: 'subnav',
+        name: 'subnav',
+        meta: {
+          title: '子导航 Subnav'
+        },
+        component: DesignSubnav
       }
     ]
   }
