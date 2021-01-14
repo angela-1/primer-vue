@@ -1,7 +1,7 @@
 {
   "name": "@angela-1/primer-vue",
   "description": "A UI Toolkit built on Vue.js 3.0 with @primer/css",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": "Angela-1",
   "repository": "https://github.com/angela-1/primer-vue.git",
   "license": "MulanPSL-2.0",
@@ -13,8 +13,7 @@
     "dev": "vite",
     "build:dev": "vite build",
     "build:prod": "yarn clean && vuedx-typecheck ./packages && vite build",
-    "clean": "rm -rf dist",
-    "publish:prod": "sh scripts/publish-to-npm.sh"
+    "clean": "rm -rf dist"
   },
   "files": [
     "dist"
