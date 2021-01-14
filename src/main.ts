@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
-import PrimerVue from '../dist/primer-vue.es';
+import PrimerVue from '../dist/@angela-1/primer-vue.es';
 
 // console.log('ve', PrimerVue);
 // import { PrButton } from '../packages/button';

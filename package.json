@@ -5,7 +5,6 @@
   "author": "Angela-1",
   "repository": "https://github.com/angela-1/primer-vue.git",
   "license": "MulanPSL-2.0",
-  "type": "module",
   "keywords": [
     "vuejs",
     "primer-css"

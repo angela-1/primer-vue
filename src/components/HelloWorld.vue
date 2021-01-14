@@ -1,7 +1,6 @@
 <template>
   <!-- <pr-icon name="rocket"></pr-icon> -->
 
-
   <h1>{{ msg }}</h1>
 
   <pr-alert>sdfsfs</pr-alert>
@@ -10,6 +9,11 @@
     <span>妹发</span>
   </pr-button>
 
+  <pr-subnav @change="onChange">
+    <pr-subnav-item name="doc">文档</pr-subnav-item>
+    <pr-subnav-item name="signature">签到表</pr-subnav-item>
+    <pr-subnav-item name="nihao">其他</pr-subnav-item>
+  </pr-subnav>
 
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank"
@@ -62,7 +66,10 @@ export default defineComponent({
   },
   setup: () => {
     const count = ref(0);
-    return { count };
+    const onChange = () => {
+      console.log('subnav change');
+    };
+    return { count, onChange };
   },
 });
 </script>

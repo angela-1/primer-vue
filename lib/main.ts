@@ -2,8 +2,10 @@ import type { App } from 'vue';
 import { PrIcon } from '../packages/icon';
 import { PrButton } from '../packages/button';
 import { PrAlert } from '../packages/alert';
+import { PrSubnav } from '../packages/subnav';
+import { PrSubnavItem } from '../packages/subnav-item';
 
-const components = [PrButton, PrIcon, PrAlert];
+const components = [PrButton, PrIcon, PrAlert, PrSubnav, PrSubnavItem];
 
 const install = function (app: App, _: any): void {
   console.log('app', app);
