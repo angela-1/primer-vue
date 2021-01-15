@@ -8,6 +8,8 @@ import { Pagination } from '../packages/pagination'
 import { Sidenav } from '../packages/sidenav'
 import { SidenavItem } from '../packages/sidenav-item'
 import { SidenavSubitems } from '../packages/sidenav-subitems'
+import { Subnav } from '../packages/subnav'
+import { SubnavItem } from '../packages/subnav-item'
 import '@primer/css/index.scss'
 
 const components = [
@@ -19,7 +21,9 @@ const components = [
   Pagination,
   Sidenav,
   SidenavItem,
-  SidenavSubitems
+  SidenavSubitems,
+  Subnav,
+  SubnavItem
 ]
 
 export const install = function (app: App, opts = {}) {
@@ -27,5 +31,5 @@ export const install = function (app: App, opts = {}) {
     app.component(component.name, component);
   })
 }
-export const version = '0.0.3'
+export const version = '0.1.2'
 

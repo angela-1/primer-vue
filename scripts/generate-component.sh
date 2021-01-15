@@ -14,12 +14,10 @@ fi
 DIRNAME="$FILE_PATH/$NAME"
 INPUT_NAME=$NAME
 
-DOC_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/../src/docs" && pwd)
 
 echo $DIRNAME
 echo $INPUT_NAME
 
-echo $DOC_DIR
 
 
 if [ -d "$DIRNAME" ]; then
@@ -85,16 +83,3 @@ describe('$NAME.vue', () => {
 })
 EOF
 
-# 输出文档模板
-cat > $DOC_DIR/$INPUT_NAME.md <<EOF
----
-title: '$NAME'
-desc: 'Usage of $NAME component'
----
-
-# $NAME
-
-Simple description.
-
-
-EOF

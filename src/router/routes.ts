@@ -8,6 +8,7 @@ import DocDateRange from '../docs/date-range.md'
 import DocPagination from '../docs/pagination.md'
 import DocLabel from '../docs/label.md'
 import DocSidenav from '../docs/sidenav.md'
+import DocSubnav from '../docs/subnav.md'
 
 export const routes: RouteRecordRaw[] = [
   // 重定向的路由不能有name，会造成无限调用
@@ -77,9 +78,17 @@ export const routes: RouteRecordRaw[] = [
         path: 'sidenav',
         name: 'sidenav',
         meta: {
-          title: '标签 Sidenav'
+          title: '导航 Sidenav'
         },
         component: DocSidenav
+      },
+      {
+        path: 'subnav',
+        name: 'subnav',
+        meta: {
+          title: '子导航 Subnav'
+        },
+        component: DocSubnav
       },
     ]
   }

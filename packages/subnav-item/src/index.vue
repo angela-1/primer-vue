@@ -10,30 +10,32 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, inject, Ref, ref } from 'vue'
+import { computed, defineComponent, inject, Ref, ref } from 'vue';
 export default defineComponent({
   name: 'PrSubnavItem',
   props: {
     name: {
-      type: String
+      type: [String, Number],
+      required: true
     }
   },
   setup(props, ctx) {
-    const selected: Ref<string> = inject('selected')
+    const selected: Ref<string | number> = inject('selected') ?? ref('');
 
     const activeClass = computed(() => {
-      return selected.value === props.name ? 'page' : 'false'
-    })
+      return selected.value === props.name ? 'page' : 'false';
+    });
 
     const handleClick = (event: any, navigate: Function) => {
-      console.log('click', props.name)
-      event.preventDefault()
-      selected.value = props.name
-    }
+      console.log('click', props.name, selected.value);
+      event.preventDefault();
+      selected.value = props.name;
+    };
     return {
       activeClass,
-      handleClick
-    }
+      handleClick,
+      selected
+    };
   }
-})
+});
 </script>
