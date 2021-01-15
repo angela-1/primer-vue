@@ -6,8 +6,10 @@
   "repository": "https://github.com/angela-1/primer-vue.git",
   "license": "MulanPSL-2.0",
   "keywords": [
-    "vuejs",
-    "primer-css"
+    "vue3",
+    "ui",
+    "primer-css",
+    "components"
   ],
   "scripts": {
     "dev": "vite",

@@ -19,7 +19,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         globals: {
-          vue: 'Vue'
+          vue: 'Vue',
+          dayjs: 'dayjs'
         }
       },
       external: ['vue', 'dayjs']

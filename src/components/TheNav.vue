@@ -35,22 +35,21 @@
       </template>
     </ul>
   </pr-sidenav>
-  
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { routes } from '../router/routes'
+import { computed, defineComponent } from 'vue';
+import { routes } from '../router/routes';
 export default defineComponent({
   name: 'TheNav',
   setup() {
-    console.log('rts', routes)
+    console.log('rts', routes);
     const filterdRoutes = computed(() => {
-      return routes.filter((v) => !!v.meta)
-    })
+      return routes.filter((v) => !!v.meta);
+    });
     return {
       filterdRoutes
-    }
+    };
   }
-})
+});
 </script>
