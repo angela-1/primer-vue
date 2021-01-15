@@ -7,8 +7,5 @@ desc: 'Usage of Sidenav component'
 
 Simple description.
 
+See left side nav
 
-```vue demo
-pr-sidenav
-
-```

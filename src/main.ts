@@ -6,6 +6,8 @@ import * as PrimerVue from '../lib/index';
 import '../dist/style.css';
 
 import 'vite-plugin-vuedoc/style.css'
+import './index.scss'
+
 
 const app = createApp(App);
 app.use(router)

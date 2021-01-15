@@ -7,6 +7,7 @@ import DocButton from '../docs/button.md'
 import DocDateRange from '../docs/date-range.md'
 import DocPagination from '../docs/pagination.md'
 import DocLabel from '../docs/label.md'
+import DocSidenav from '../docs/sidenav.md'
 
 export const routes: RouteRecordRaw[] = [
   // 重定向的路由不能有name，会造成无限调用
@@ -71,6 +72,14 @@ export const routes: RouteRecordRaw[] = [
           title: '标签 Label'
         },
         component: DocLabel
+      },
+      {
+        path: 'sidenav',
+        name: 'sidenav',
+        meta: {
+          title: '标签 Sidenav'
+        },
+        component: DocSidenav
       },
     ]
   }

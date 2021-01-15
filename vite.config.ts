@@ -11,9 +11,9 @@ export default defineConfig({
   }), vue()],
   server: {
     port: 8080,
-    // hmr: {
-    //   port: 10080
-    // }
+    hmr: {
+      port: 10080
+    }
   },
   build: {
     rollupOptions: {
@@ -22,7 +22,7 @@ export default defineConfig({
           vue: 'Vue'
         }
       },
-      external: ['vue']
+      external: ['vue', 'dayjs']
     },
     lib: {
       entry: path.resolve(__dirname, 'lib/index.ts'),
