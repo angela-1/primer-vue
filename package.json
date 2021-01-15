@@ -26,6 +26,7 @@
   "main": "./dist/primer-vue.es.js",
   "module": "./dist/primer-vue.es.js",
   "exports": {
+    ".": "./dist/primer-vue.es.js",
     "./dist/": "./dist/"
   },
   "dependencies": {
