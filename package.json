@@ -1,5 +1,5 @@
 {
-  "name": "@angela-1/primer-vue",
+  "name": "primer-vue",
   "description": "A UI Toolkit built on Vue.js 3.0 with @primer/css",
   "version": "0.0.3",
   "author": "Angela-1",
@@ -23,7 +23,7 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/primer-vue.umd.js",
+  "main": "./dist/primer-vue.es.js",
   "module": "./dist/primer-vue.es.js",
   "exports": "./dist/primer-vue.es.js",
   "dependencies": {
