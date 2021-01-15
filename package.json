@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "vite",
     "gen:comp": "bash ./scripts/generate-component.sh",
+    "gen:doc": "bash ./scripts/generate-doc.sh",
     "gen:entry": "node ./scripts/generate-entry.js",
     "build:dev": "vite build",
     "build:prod": "yarn clean && vuedx-typecheck ./packages && vite build",

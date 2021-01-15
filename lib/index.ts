@@ -5,6 +5,9 @@ import { DateRange } from '../packages/date-range'
 import { Icon } from '../packages/icon'
 import { Label } from '../packages/label'
 import { Pagination } from '../packages/pagination'
+import { Sidenav } from '../packages/sidenav'
+import { SidenavItem } from '../packages/sidenav-item'
+import { SidenavSubitems } from '../packages/sidenav-subitems'
 import '@primer/css/index.scss'
 
 const components = [
@@ -13,7 +16,10 @@ const components = [
   DateRange,
   Icon,
   Label,
-  Pagination
+  Pagination,
+  Sidenav,
+  SidenavItem,
+  SidenavSubitems
 ]
 
 export const install = function (app: App, opts = {}) {

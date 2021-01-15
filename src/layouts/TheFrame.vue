@@ -1,9 +1,9 @@
 <template>
   <div class="sidebar d-lg-block">
-    <!-- <the-nav></the-nav> -->
+    <the-nav></the-nav>
   </div>
   <main class="width-full">
-    <router-link to="/">go home</router-link>
+    <!-- <router-link to="/">go home</router-link> -->
     <router-view></router-view>
     <the-footer></the-footer>
   </main>

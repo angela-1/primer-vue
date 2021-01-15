@@ -2,12 +2,11 @@ import { RouteRecordRaw } from 'vue-router';
 
 import Design from '../views/Design.vue';
 import TheNested from '../layouts/TheNested.vue';
-import DesignIcon from '../views/DesignIcon.vue';
-import DesignButton from '../views/DesignButton.vue';
-import DesignDateRange from '../views/DesignDateRange.vue';
-import DesignPagination from '../views/DesignPagination.vue';
-import DesignLabel from '../views/DesignLabel.vue';
+import DocIcon from '../docs/icon.md'
 import DocButton from '../docs/button.md'
+import DocDateRange from '../docs/date-range.md'
+import DocPagination from '../docs/pagination.md'
+import DocLabel from '../docs/label.md'
 
 export const routes: RouteRecordRaw[] = [
   // 重定向的路由不能有name，会造成无限调用
@@ -39,7 +38,7 @@ export const routes: RouteRecordRaw[] = [
         meta: {
           title: '图标 Icon'
         },
-        component: DesignIcon
+        component: DocIcon
       },
       {
         path: 'button',
@@ -47,7 +46,7 @@ export const routes: RouteRecordRaw[] = [
         meta: {
           title: '按钮 Button'
         },
-        component: DocButton // DesignButton
+        component: DocButton
       },
       {
         path: 'date-range',
@@ -55,7 +54,7 @@ export const routes: RouteRecordRaw[] = [
         meta: {
           title: '日期范围 DateRange'
         },
-        component: DesignDateRange
+        component: DocDateRange
       },
       {
         path: 'pagination',
@@ -63,7 +62,7 @@ export const routes: RouteRecordRaw[] = [
         meta: {
           title: '翻页 Pagination'
         },
-        component: DesignPagination
+        component: DocPagination
       },
       {
         path: 'label',
@@ -71,7 +70,7 @@ export const routes: RouteRecordRaw[] = [
         meta: {
           title: '标签 Label'
         },
-        component: DesignLabel
+        component: DocLabel
       },
     ]
   }

@@ -14,8 +14,13 @@ fi
 DIRNAME="$FILE_PATH/$NAME"
 INPUT_NAME=$NAME
 
+DOC_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/../src/docs" && pwd)
+
 echo $DIRNAME
 echo $INPUT_NAME
+
+echo $DOC_DIR
+
 
 if [ -d "$DIRNAME" ]; then
   echo "$NAME component already exists, please change it"
@@ -64,21 +69,6 @@ export const install = function (app: App) {
 export const ${NAME} = Comp
 EOF
 
-# cat > $DIRNAME/package.json <<EOF
-# {
-#   "name": "@element-plus/$INPUT_NAME",
-#   "version": "0.0.0",
-#   "main": "dist/index.js",
-#   "license": "MIT",
-#   "peerDependencies": {
-#     "vue": "^3.0.5"
-#   },
-#   "devDependencies": {
-#     "@vue/test-utils": "^2.0.0-beta.3"
-#   }
-# }
-# EOF
-
 cat > $DIRNAME/__tests__/$INPUT_NAME.spec.ts <<EOF
 import { mount } from '@vue/test-utils'
 import $NAME from '../src/index.vue'
@@ -93,4 +83,18 @@ describe('$NAME.vue', () => {
     expect(wrapper.text()).toEqual(AXIOM)
   })
 })
+EOF
+
+# 输出文档模板
+cat > $DOC_DIR/$INPUT_NAME.md <<EOF
+---
+title: '$NAME'
+desc: 'Usage of $NAME component'
+---
+
+# $NAME
+
+Simple description.
+
+
 EOF
