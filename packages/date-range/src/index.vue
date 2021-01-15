@@ -18,7 +18,7 @@
       @change="rangeChange('to')"
       @keyup.enter="submit"
     />
-    <button type="button" @click="submit" class="btn btn-sm ml-2">查询</button>
+    <button type="button" @click="submit" class="btn btn-sm ml-2">Query</button>
   </div>
 </template>
 

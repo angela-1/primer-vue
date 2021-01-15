@@ -7,6 +7,7 @@ import DesignButton from '../views/DesignButton.vue';
 import DesignDateRange from '../views/DesignDateRange.vue';
 import DesignPagination from '../views/DesignPagination.vue';
 import DesignLabel from '../views/DesignLabel.vue';
+import DocButton from '../docs/button.md'
 
 export const routes: RouteRecordRaw[] = [
   // 重定向的路由不能有name，会造成无限调用
@@ -46,7 +47,7 @@ export const routes: RouteRecordRaw[] = [
         meta: {
           title: '按钮 Button'
         },
-        component: DesignButton
+        component: DocButton // DesignButton
       },
       {
         path: 'date-range',
