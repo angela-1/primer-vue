@@ -1,7 +1,7 @@
 {
   "name": "primer-vue",
   "description": "A UI Toolkit built on Vue.js 3.0 with @primer/css",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Angela-1",
   "repository": "https://github.com/angela-1/primer-vue.git",
   "license": "MulanPSL-2.0",
