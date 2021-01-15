@@ -5,6 +5,7 @@ import { DateRange } from '../packages/date-range'
 import { Icon } from '../packages/icon'
 import { Label } from '../packages/label'
 import { Pagination } from '../packages/pagination'
+import { Progress } from '../packages/progress'
 import { Sidenav } from '../packages/sidenav'
 import { SidenavItem } from '../packages/sidenav-item'
 import { SidenavSubitems } from '../packages/sidenav-subitems'
@@ -19,6 +20,7 @@ const components = [
   Icon,
   Label,
   Pagination,
+  Progress,
   Sidenav,
   SidenavItem,
   SidenavSubitems,

@@ -32,7 +32,7 @@ NAME=$NORMALIZED_NAME
 
 
 # 输出文档模板
-cat > $DOC_DIR/$INPUT_NAME.md <<EOF
+cat > $DOC_DIR/$INPUT_NAME.md << EOF
 ---
 title: '$NAME'
 desc: 'Usage of $NAME component'
@@ -41,6 +41,11 @@ desc: 'Usage of $NAME component'
 # $NAME
 
 Simple description.
+
+EOF
+# 后面的EOF带引号，可以保留原来的格式但是变量就无法保留
+# 所以分两次输入
+cat >> $DOC_DIR/$INPUT_NAME.md << "EOF"
 
 ```vue demo
 <template>
@@ -55,6 +60,5 @@ Simple description.
 ```typescript src="./test.ts"
 
 ```
-
 
 EOF

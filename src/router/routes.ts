@@ -9,6 +9,7 @@ import DocPagination from '../docs/pagination.md'
 import DocLabel from '../docs/label.md'
 import DocSidenav from '../docs/sidenav.md'
 import DocSubnav from '../docs/subnav.md'
+import DocProgress from '../docs/progress.md'
 
 export const routes: RouteRecordRaw[] = [
   // 重定向的路由不能有name，会造成无限调用
@@ -89,6 +90,14 @@ export const routes: RouteRecordRaw[] = [
           title: '子导航 Subnav'
         },
         component: DocSubnav
+      },
+      {
+        path: 'progress',
+        name: 'progress',
+        meta: {
+          title: '进度条 Progress'
+        },
+        component: DocProgress
       },
     ]
   }
