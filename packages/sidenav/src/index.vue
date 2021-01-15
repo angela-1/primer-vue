@@ -7,20 +7,10 @@
 
 <script lang="ts">
 import { Component, defineComponent, Fragment, provide, ref, VNode } from 'vue';
-// import PrSidenavItem from './sidenav-item.vue'
 export default defineComponent({
   name: 'PrSidenav',
-  // components: {
-  //   PrSidenavItem
-  // },
   setup(props, ctx) {
     const slots = (ctx.slots.default && ctx.slots.default()) ?? [];
-
-    const isFragment = ref(false);
-
-    slots.forEach((v) => {
-      console.log('how much slots', v);
-    });
 
     // 查找第一个子元素，为了设置默认选择项
     // 递归地查找到第一个子元素

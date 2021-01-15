@@ -1,5 +1,5 @@
 <template>
-  <li class="sidebar-category py-1 active">
+  <li class="sidebar-category list-style-none">
     <details class="dropdown-withArrow details details-reset" open="">
       <summary>
         <div class="d-flex flex-justify-between">
@@ -25,7 +25,7 @@
           </svg>
         </div>
       </summary>
-      <ul class="sidebar-products list-style-none">
+      <ul class="sidebar-articles list-style-none">
         <slot></slot>
       </ul>
     </details>

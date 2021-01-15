@@ -1,5 +1,5 @@
 <template>
-  <li class="sidebar-product" :class="activeClass">
+  <li class="sidebar-article" :class="activeClass">
     <router-link :to="to" custom v-slot="{ isActive, href, navigate }">
       <a
         class="pl-4 pr-5 pb-2 f4"

@@ -11,26 +11,31 @@
     </router-link>
   </div>
   <pr-sidenav>
-    <template v-for="route in filterdRoutes" :key="route.name">
-      <template v-if="!!route.children">
-        <pr-sidenav-subitems :name="route.name" :title="route.meta.title">
-          <pr-sidenav-item
-            v-for="child in route.children"
-            :key="child.name"
-            :name="child.name"
-            :to="route.path + '/' + child.path"
-          >
-            {{ child.meta.title }}
+    <ul class="sidebar-categories">
+      <template v-for="route in filterdRoutes" :key="route.name">
+        <template v-if="!!route.children">
+          <ul class="sidebar-categories list-style-none">
+            <pr-sidenav-subitems :name="route.name" :title="route.meta.title">
+              <pr-sidenav-item
+                v-for="child in route.children"
+                :key="child.name"
+                :name="child.name"
+                :to="route.path + '/' + child.path"
+              >
+                {{ child.meta.title }}
+              </pr-sidenav-item>
+            </pr-sidenav-subitems>
+          </ul>
+        </template>
+        <template v-else>
+          <pr-sidenav-item :name="route.name" :to="route.path">
+            {{ route.meta.title }}
           </pr-sidenav-item>
-        </pr-sidenav-subitems>
+        </template>
       </template>
-      <template v-else>
-        <pr-sidenav-item :name="route.name" :to="route.path">
-          {{ route.meta.title }}
-        </pr-sidenav-item>
-      </template>
-    </template>
+    </ul>
   </pr-sidenav>
+  
 </template>
 
 <script lang="ts">
