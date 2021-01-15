@@ -25,7 +25,9 @@
   ],
   "main": "./dist/primer-vue.es.js",
   "module": "./dist/primer-vue.es.js",
-  "exports": "./dist/primer-vue.es.js",
+  "exports": {
+    "./dist/": "./dist/"
+  },
   "dependencies": {
     "@primer/css": "^15.2.0",
     "@primer/octicons": "^11.2.0",
