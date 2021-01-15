@@ -1,6 +1,5 @@
 <template>
   <span
-    class="IssueLabel label-state"
     :class="[classes, checked ? 'checked' : '']"
     :title="'标签：' + title"
     @click="toggle()"
@@ -19,18 +18,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
-import { PrIcon } from '../icon'
+import { defineComponent, PropType } from 'vue';
 
 export default defineComponent({
   name: 'PrLabel',
-  components: {
-    PrIcon
-  },
   props: {
     classes: {
       type: String,
-      default: ''
+      default: 'Label'
     },
     checked: {
       type: Boolean,
@@ -47,26 +42,5 @@ export default defineComponent({
       default: false
     }
   }
-})
+});
 </script>
-
-<style lang="scss" scoped>
-@import '@primer/css/support/index.scss';
-.label-state {
-  cursor: pointer;
-  background-color: $bg-gray;
-
-  &:hover {
-    background-color: $gray-200;
-  }
-}
-
-.checked {
-  background-color: $bg-blue-light;
-  color: $text-blue;
-
-  &:hover {
-    background-color: $blue-100;
-  }
-}
-</style>

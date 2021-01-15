@@ -6,6 +6,7 @@ import DesignIcon from '../views/DesignIcon.vue';
 import DesignButton from '../views/DesignButton.vue';
 import DesignDateRange from '../views/DesignDateRange.vue';
 import DesignPagination from '../views/DesignPagination.vue';
+import DesignLabel from '../views/DesignLabel.vue';
 
 export const routes: RouteRecordRaw[] = [
   // 重定向的路由不能有name，会造成无限调用
@@ -62,6 +63,14 @@ export const routes: RouteRecordRaw[] = [
           title: '翻页 Pagination'
         },
         component: DesignPagination
+      },
+      {
+        path: 'label',
+        name: 'label',
+        meta: {
+          title: '标签 Label'
+        },
+        component: DesignLabel
       },
     ]
   }

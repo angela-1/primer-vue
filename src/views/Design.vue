@@ -4,17 +4,8 @@
     <template #content>
       <p>TODO</p>
       <ul>
-        <li>
-          <router-link to="/components/icon"> icon </router-link>
-        </li>
-        <li>
-          <router-link to="/components/button"> button </router-link>
-        </li>
-        <li>
-          <router-link to="/components/date-range"> date-range </router-link>
-        </li>
-        <li>
-          <router-link to="/components/pagination"> pagination </router-link>
+        <li v-for="comp of components" :key="comp">
+          <router-link :to="`/components/${comp}`"> {{ comp }}</router-link>
         </li>
       </ul>
     </template>
@@ -29,6 +20,12 @@ export default defineComponent({
   name: 'Design',
   components: {
     TheComponent
+  },
+  setup() {
+    const components = ['icon', 'button', 'date-range', 'pagination', 'label'];
+    return {
+      components
+    };
   }
 });
 </script>

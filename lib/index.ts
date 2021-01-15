@@ -3,6 +3,7 @@ import { Button } from '../packages/button'
 import { ButtonGroup } from '../packages/button-group'
 import { DateRange } from '../packages/date-range'
 import { Icon } from '../packages/icon'
+import { Label } from '../packages/label'
 import { Pagination } from '../packages/pagination'
 import '@primer/css/index.scss'
 
@@ -11,6 +12,7 @@ const components = [
   ButtonGroup,
   DateRange,
   Icon,
+  Label,
   Pagination
 ]
 
