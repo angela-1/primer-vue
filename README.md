@@ -6,8 +6,10 @@ A UI Toolkit built on Vue.js 3.0 with [@primer/css](https://github.com/primer/cs
 
 ## Components
 
-- [x] icon
 - [x] button
 - [x] date-range
-- [x] pagination
+- [x] icon
 - [x] label
+- [x] pagination
+- [x] sidenav
+
