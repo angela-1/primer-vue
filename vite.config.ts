@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 8080,
-    hmr: {
-      port: 10080,
-    },
+    // hmr: {
+    //   port: 10080,
+    // },
   },
   build: {
     rollupOptions: {
