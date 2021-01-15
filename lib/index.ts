@@ -1,12 +1,17 @@
 import { App } from 'vue'
 import { Button } from '../packages/button'
 import { ButtonGroup } from '../packages/button-group'
+import { DateRange } from '../packages/date-range'
 import { Icon } from '../packages/icon'
+import { Pagination } from '../packages/pagination'
+import '@primer/css/index.scss'
 
 const components = [
   Button,
   ButtonGroup,
-  Icon
+  DateRange,
+  Icon,
+  Pagination
 ]
 
 export const install = function (app: App, opts = {}) {

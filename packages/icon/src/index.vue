@@ -4,6 +4,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, ref, Ref } from 'vue'
+// @ts-ignore
 import octicons from '@primer/octicons'
 
 export enum Size {

@@ -1,7 +1,7 @@
 import { App } from 'vue'
-import Comp from '../button/button-group.vue'
+import Comp from './src/index.vue'
 export const install = function (app: App) {
   app.component(Comp.name, Comp)
 }
 
-export const PrButtonGroup = Comp
+export const DateRange = Comp

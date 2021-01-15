@@ -23,8 +23,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, reactive, toRefs } from 'vue'
-import dayjs from 'dayjs'
+import { defineComponent, PropType, reactive, toRefs } from 'vue';
+import dayjs from 'dayjs';
 
 export default defineComponent({
   name: 'PrDateRange',
@@ -38,46 +38,48 @@ export default defineComponent({
   },
   emits: ['date-change'],
   setup(props, ctx) {
-    const { range, rangeChange } = useDateRange(props.from, props.to)
+    const from: string = props.from ?? '';
+    const to: string = props.from ?? '';
+    const { range, rangeChange } = useDateRange(from, to);
 
     const submit = () => {
-      console.log('submit date', range)
-      ctx.emit('date-change', range)
-    }
+      console.log('submit date', range);
+      ctx.emit('date-change', range);
+    };
     return {
       ...toRefs(range),
       rangeChange,
       submit
-    }
+    };
   }
-})
+});
 
 function useDateRange(from: string, to: string) {
   const range = reactive({
     from,
     to
-  })
+  });
 
   const validateDateRange = (targetValue: string): void => {
-    const fromDate = dayjs(range.from)
-    const toDate = dayjs(range.to)
+    const fromDate = dayjs(range.from);
+    const toDate = dayjs(range.to);
     if (toDate.isBefore(fromDate)) {
       if (targetValue === 'from') {
-        range.to = range.from
+        range.to = range.from;
       } else {
-        range.from = range.to
+        range.from = range.to;
       }
     }
-    console.log('range', range)
-  }
+    console.log('range', range);
+  };
 
   const rangeChange = (targetValue: string) => {
-    validateDateRange(targetValue)
-  }
+    validateDateRange(targetValue);
+  };
 
   return {
     range,
     rangeChange
-  }
+  };
 }
 </script>

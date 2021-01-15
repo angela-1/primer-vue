@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 8080,
-    // hmr: {
-    //   port: 10080,
-    // },
+    hmr: {
+      port: 10080,
+    },
   },
   build: {
     rollupOptions: {
@@ -20,7 +20,7 @@ export default defineConfig({
       external: ['vue'],
     },
     lib: {
-      entry: path.resolve(__dirname, 'lib/main.ts'),
+      entry: path.resolve(__dirname, 'lib/index.ts'),
       name: 'primer-vue',
     },
   },

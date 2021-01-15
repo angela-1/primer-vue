@@ -180,6 +180,13 @@
   dependencies:
     "@primer/octicons" "^9.1.1"
 
+"@primer/octicons@^11.2.0":
+  version "11.2.0"
+  resolved "https://registry.npm.taobao.org/@primer/octicons/download/@primer/octicons-11.2.0.tgz#2caaa3a6e56f549be53b4d4004d383fd1120288b"
+  integrity sha1-LKqjpuVvVJvlO01ABNOD/REgKIs=
+  dependencies:
+    object-assign "^4.1.1"
+
 "@primer/octicons@^9.1.1":
   version "9.6.0"
   resolved "https://registry.npm.taobao.org/@primer/octicons/download/@primer/octicons-9.6.0.tgz#e195f2dd5f30b6918ad5d8ff224c12f778d02408"
@@ -563,6 +570,11 @@ csstype@^2.6.8:
   version "2.6.14"
   resolved "https://registry.npm.taobao.org/csstype/download/csstype-2.6.14.tgz#004822a4050345b55ad4dcc00be1d9cf2f4296de"
   integrity sha1-AEgipAUDRbVa1NzAC+HZzy9Clt4=
+
+dayjs@^1.10.3:
+  version "1.10.3"
+  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.10.3.tgz?cache=0&sync_timestamp=1610178126836&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.10.3.tgz#cf3357c8e7f508432826371672ebf376cb7d619b"
+  integrity sha1-zzNXyOf1CEMoJjcWcuvzdst9YZs=
 
 de-indent@^1.0.2:
   version "1.0.2"
@@ -1318,6 +1330,11 @@ vscode-web-custom-data@^0.3.2:
   version "0.3.2"
   resolved "https://registry.npm.taobao.org/vscode-web-custom-data/download/vscode-web-custom-data-0.3.2.tgz#62a5a924397d8056c5524ff0ff8f14eb815b7066"
   integrity sha1-YqWpJDl9gFbFUk/w/48U64FbcGY=
+
+vue-router@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-4.0.3.tgz?cache=0&sync_timestamp=1610356219080&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-4.0.3.tgz#8b26050c88b2dec7e27a88835f71046b365823ec"
+  integrity sha1-iyYFDIiy3sfieoiDX3EEazZYI+w=
 
 vue@^3.0.5:
   version "3.0.5"

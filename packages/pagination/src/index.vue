@@ -71,8 +71,8 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
-import { PaginationType, PaginstionModel } from '../types/pagination'
+import { computed, defineComponent, ref } from 'vue';
+import { PaginationType, PaginstionModel } from '../../types/pagination';
 export default defineComponent({
   name: 'PrPagination',
   props: {
@@ -99,7 +99,7 @@ export default defineComponent({
   },
   emits: ['page-change'],
   setup(props, ctx) {
-    const current = ref(props.currentPage)
+    const current = ref(props.currentPage);
     /**
      * 生成翻页组件数据，函数直接从@primer/component复制过来
      * https://github.com/primer/components/blob/master/src/Pagination/model.js
@@ -117,34 +117,34 @@ export default defineComponent({
       marginPageCount: number,
       surroundingPageCount: number
     ): PaginstionModel[] => {
-      const pages: PaginstionModel[] = []
+      const pages: PaginstionModel[] = [];
 
       if (showPages) {
-        const pageNums: number[] = []
+        const pageNums: number[] = [];
         const addPage = (n: number) => {
           if (n >= 1 && n <= pageCount) {
-            pageNums.push(n)
+            pageNums.push(n);
           }
-        }
+        };
 
         // Start by defining the window of pages to show around the current page.
         // If the window goes off either edge, shift it until it fits.
-        let extentLeft = currentPage - surroundingPageCount
-        let extentRight = currentPage + surroundingPageCount
+        let extentLeft = currentPage - surroundingPageCount;
+        let extentRight = currentPage + surroundingPageCount;
         if (extentLeft < 1 && extentRight > pageCount) {
           // Our window is larger than the entire range,
           // so simply display every page.
-          extentLeft = 1
-          extentRight = pageCount
+          extentLeft = 1;
+          extentRight = pageCount;
         } else if (extentLeft < 1) {
           while (extentLeft < 1) {
-            extentLeft++
-            extentRight++
+            extentLeft++;
+            extentRight++;
           }
         } else if (extentRight > pageCount) {
           while (extentRight > pageCount) {
-            extentLeft--
-            extentRight--
+            extentLeft--;
+            extentRight--;
           }
         }
 
@@ -152,31 +152,31 @@ export default defineComponent({
         // If a margin page is already covered in the window,
         // extend the window to the other direction.
         for (let i = 1; i <= marginPageCount; i++) {
-          const leftPage = i
-          const rightPage = pageCount - (i - 1)
+          const leftPage = i;
+          const rightPage = pageCount - (i - 1);
           if (leftPage >= extentLeft) {
-            extentRight++
+            extentRight++;
           } else {
-            addPage(leftPage)
+            addPage(leftPage);
           }
           if (rightPage <= extentRight) {
-            extentLeft--
+            extentLeft--;
           } else {
-            addPage(rightPage)
+            addPage(rightPage);
           }
         }
 
         for (let i = extentLeft; i <= extentRight; i++) {
-          addPage(i)
+          addPage(i);
         }
 
         const sorted = pageNums
           .slice()
           .sort((a, b) => a - b)
-          .filter((item, idx, ary) => !idx || item !== ary[idx - 1])
+          .filter((item, idx, ary) => !idx || item !== ary[idx - 1]);
         for (let idx = 0; idx < sorted.length; idx++) {
-          const num = sorted[idx]
-          const selected = num === currentPage
+          const num = sorted[idx];
+          const selected = num === currentPage;
           if (idx === 0) {
             if (num !== 1) {
               // If the first page isn't page one,
@@ -184,38 +184,38 @@ export default defineComponent({
               pages.push({
                 type: PaginationType.Break,
                 num: 1
-              })
+              });
             }
             pages.push({
               type: PaginationType.Num,
               num,
               selected
-            })
+            });
           } else {
-            const last = sorted[idx - 1]
-            const delta = num - last
+            const last = sorted[idx - 1];
+            const delta = num - last;
             if (delta === 1) {
               pages.push({
                 type: PaginationType.Num,
                 num,
                 selected
-              })
+              });
             } else {
               // We skipped some, so add a break
               pages.push({
                 type: PaginationType.Break,
                 num: num - 1
-              })
+              });
               pages.push({
                 type: PaginationType.Num,
                 num,
                 selected
-              })
+              });
             }
           }
         }
 
-        const lastPage = pages[pages.length - 1]
+        const lastPage = pages[pages.length - 1];
         if (
           lastPage.type === PaginationType.Num &&
           lastPage.num !== pageCount
@@ -225,7 +225,7 @@ export default defineComponent({
           pages.push({
             type: PaginationType.Break,
             num: pageCount
-          })
+          });
         }
       }
 
@@ -233,14 +233,14 @@ export default defineComponent({
         type: PaginationType.Prev,
         num: currentPage - 1,
         disabled: currentPage === 1
-      }
+      };
       const next: PaginstionModel = {
         type: PaginationType.Next,
         num: currentPage + 1,
         disabled: currentPage === pageCount
-      }
-      return [prev, ...pages, next]
-    }
+      };
+      return [prev, ...pages, next];
+    };
 
     const pageNums = computed(() => {
       return buildPaginationModel(
@@ -249,21 +249,21 @@ export default defineComponent({
         props.showPages,
         props.marginPageCount,
         props.surroundingPageCount
-      )
-    })
+      );
+    });
 
     const onPageChange = (val: number): void => {
-      console.log('page change', val)
+      console.log('page change', val);
 
-      current.value = val
-      ctx.emit('page-change', current.value)
-    }
+      current.value = val;
+      ctx.emit('page-change', current.value);
+    };
 
     return {
       pageNums,
       onPageChange,
       PaginationType
-    }
+    };
   }
-})
+});
 </script>

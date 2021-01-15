@@ -4,7 +4,7 @@ const uppercamelcase = require('uppercamelcase')
 const path = require('path')
 const endOfLine = require('os').EOL
 const startOfLine = '  '.repeat(1)
-const backlist = ['types']
+const backlist = ['types', 'index.d.ts']
 
 const OUTPUT_PATH = path.join(__dirname, '../lib/index.ts')
 
@@ -26,6 +26,7 @@ const importComponents = components.map(({ name, package }) => {
 
 const template = `import { App } from 'vue'
 {{importComponents}}
+import '@primer/css/index.scss'
 
 const components = [
   {{components}}

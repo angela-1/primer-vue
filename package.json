@@ -10,7 +10,7 @@
     "primer-css"
   ],
   "scripts": {
-    "dev": "yarn build:dev && vite",
+    "dev": "vite",
     "gen:comp": "bash ./scripts/generate-component.sh",
     "gen:entry": "node ./scripts/generate-entry.js",
     "build:dev": "vite build",
@@ -25,7 +25,10 @@
   "exports": "./dist/primer-vue.es.js",
   "dependencies": {
     "@primer/css": "^15.2.0",
-    "vue": "^3.0.5"
+    "@primer/octicons": "^11.2.0",
+    "dayjs": "^1.10.3",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.3"
   },
   "devDependencies": {
     "@types/node": "^14.14.20",
