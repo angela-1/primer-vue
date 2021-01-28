@@ -279,7 +279,7 @@
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.22.tgz#0d29f382472c4ccf3bd96ff0ce47daf5b7b84b18"
   integrity sha1-DSnzgkcsTM872W/wzkfa9be4Sxg=
 
-"@vitejs/plugin-vue@^1.1.0":
+"@vitejs/plugin-vue@^1.1.2":
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.1.2.tgz#64d1f0e0739675f5717015ffb4d861c53af8fe60"
   integrity sha1-ZNHw4HOWdfVxcBX/tNhhxTr4/mA=
@@ -426,7 +426,7 @@
   dependencies:
     "@vue/compiler-core" "^3.0.0"
 
-"@vuedx/typecheck@^0.6.0":
+"@vuedx/typecheck@^0.6.3":
   version "0.6.3"
   resolved "https://registry.npm.taobao.org/@vuedx/typecheck/download/@vuedx/typecheck-0.6.3.tgz#d66b8dcfa8d7d37ccfa196d019c8a5cc8bc7fc4d"
   integrity sha1-1muNz6jX03zPoZbQGcilzIvH/E0=
@@ -440,7 +440,7 @@
     resolve-from "^5.0.0"
     typescript "^4.0.3"
 
-"@vuedx/typescript-plugin-vue@0.6.3", "@vuedx/typescript-plugin-vue@^0.6.0":
+"@vuedx/typescript-plugin-vue@0.6.3", "@vuedx/typescript-plugin-vue@^0.6.3":
   version "0.6.3"
   resolved "https://registry.npm.taobao.org/@vuedx/typescript-plugin-vue/download/@vuedx/typescript-plugin-vue-0.6.3.tgz#cc2d99bdc0abbde9bb5909341c47715af00539a3"
   integrity sha1-zC2ZvcCrvem7WQk0HEdxWvAFOaM=
@@ -682,7 +682,7 @@ csstype@^2.6.8:
   resolved "https://registry.npm.taobao.org/csstype/download/csstype-2.6.14.tgz#004822a4050345b55ad4dcc00be1d9cf2f4296de"
   integrity sha1-AEgipAUDRbVa1NzAC+HZzy9Clt4=
 
-dayjs@^1.10.3:
+dayjs@^1.10.4:
   version "1.10.4"
   resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.10.4.tgz?cache=0&sync_timestamp=1611309982734&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
   integrity sha1-jlRKm4aD9heD9XCYCoqA6vVKseI=
@@ -1637,7 +1637,7 @@ uuid@^8.3.2:
   resolved "https://registry.npm.taobao.org/uuid/download/uuid-8.3.2.tgz?cache=0&sync_timestamp=1607460081656&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha1-gNW1ztJxu5r2xEXyGhoExgbO++I=
 
-vite-plugin-vuedoc@^3.0.3:
+vite-plugin-vuedoc@^3.0.5:
   version "3.0.5"
   resolved "https://registry.npm.taobao.org/vite-plugin-vuedoc/download/vite-plugin-vuedoc-3.0.5.tgz#9718fcd0c57795c0781a35a8173fec3f8d0fbc5b"
   integrity sha1-lxj80MV3lcB4GjWoFz/sP40PvFs=
@@ -1664,10 +1664,10 @@ vite-plugin-vuedoc@^3.0.3:
     rev-hash "^3.0.0"
     slash "^3.0.0"
 
-vite@^2.0.0-beta.34:
-  version "2.0.0-beta.50"
-  resolved "https://registry.npm.taobao.org/vite/download/vite-2.0.0-beta.50.tgz#04e66d009470ca90ab8a4a43687e899b670a0f25"
-  integrity sha1-BOZtAJRwypCrikpDaH6Jm2cKDyU=
+vite@^2.0.0-beta.52:
+  version "2.0.0-beta.52"
+  resolved "https://registry.npm.taobao.org/vite/download/vite-2.0.0-beta.52.tgz?cache=0&sync_timestamp=1611806534573&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvite%2Fdownload%2Fvite-2.0.0-beta.52.tgz#a06275d8b7c789358586dca51b8c01caf8599b08"
+  integrity sha1-oGJ12LfHiTWFhtylG4wByvhZmwg=
   dependencies:
     esbuild "^0.8.34"
     postcss "^8.2.1"

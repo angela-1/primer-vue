@@ -4,11 +4,12 @@ import vue from '@vitejs/plugin-vue';
 import * as path from 'path';
 
 export default defineConfig({
-  plugins: [vitePluginVuedoc({
-    highlight: {
-      theme: 'one-light'
-    }
-  }), vue()],
+  // plugins: [vitePluginVuedoc({
+  //   highlight: {
+  //     theme: 'one-light'
+  //   }
+  // }), vue()],
+  plugins: [vitePluginVuedoc({}), vue()],
   server: {
     port: 8080,
     // hmr: {
