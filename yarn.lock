@@ -180,10 +180,10 @@
   dependencies:
     "@primer/octicons" "^9.1.1"
 
-"@primer/octicons@^11.2.0":
-  version "11.2.0"
-  resolved "https://registry.npm.taobao.org/@primer/octicons/download/@primer/octicons-11.2.0.tgz#2caaa3a6e56f549be53b4d4004d383fd1120288b"
-  integrity sha1-LKqjpuVvVJvlO01ABNOD/REgKIs=
+"@primer/octicons@^11.3.0":
+  version "11.3.0"
+  resolved "https://registry.npm.taobao.org/@primer/octicons/download/@primer/octicons-11.3.0.tgz#d739204ab4e6f893ba9b7fba0d0981722c33152b"
+  integrity sha1-1zkgSrTm+JO6m3+6DQmBciwzFSs=
   dependencies:
     object-assign "^4.1.1"
 
@@ -274,10 +274,10 @@
   dependencies:
     "@types/braces" "*"
 
-"@types/node@^14.14.22":
-  version "14.14.22"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.22.tgz#0d29f382472c4ccf3bd96ff0ce47daf5b7b84b18"
-  integrity sha1-DSnzgkcsTM872W/wzkfa9be4Sxg=
+"@types/node@^14.14.24":
+  version "14.14.24"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.24.tgz?cache=0&sync_timestamp=1612395948419&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.24.tgz#541c00e4f7c41c8f108bd5b045248b5224c62946"
+  integrity sha1-VBwA5PfEHI8Qi9WwRSSLUiTGKUY=
 
 "@vitejs/plugin-vue@^1.1.4":
   version "1.1.4"
@@ -1637,10 +1637,10 @@ uuid@^8.3.2:
   resolved "https://registry.npm.taobao.org/uuid/download/uuid-8.3.2.tgz?cache=0&sync_timestamp=1607460081656&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha1-gNW1ztJxu5r2xEXyGhoExgbO++I=
 
-vite-plugin-vuedoc@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npm.taobao.org/vite-plugin-vuedoc/download/vite-plugin-vuedoc-3.1.0.tgz#effb70fd602f78646be22537ccdab7c0ee1e4f77"
-  integrity sha1-7/tw/WAveGRr4iU3zNq3wO4eT3c=
+vite-plugin-vuedoc@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npm.taobao.org/vite-plugin-vuedoc/download/vite-plugin-vuedoc-3.1.1.tgz#e179a565c2d8845a4775fea8ba265bc37e5f5f57"
+  integrity sha1-4XmlZcLYhFpHdf6ouiZbw35fX1c=
   dependencies:
     fs-extra "^8.1.0"
     gray-matter "^4.0.2"
@@ -1664,10 +1664,10 @@ vite-plugin-vuedoc@^3.1.0:
     rev-hash "^3.0.0"
     slash "^3.0.0"
 
-vite@^2.0.0-beta.61:
-  version "2.0.0-beta.61"
-  resolved "https://registry.npm.taobao.org/vite/download/vite-2.0.0-beta.61.tgz#da605152999cf8943672202ab6b38b68f4c7b9e4"
-  integrity sha1-2mBRUpmc+JQ2ciAqtrOLaPTHueQ=
+vite@^2.0.0-beta.64:
+  version "2.0.0-beta.64"
+  resolved "https://registry.npm.taobao.org/vite/download/vite-2.0.0-beta.64.tgz#245cabc72335911d4cb704545f713d47e880d84f"
+  integrity sha1-JFyrxyM1kR1MtwRUX3E9R+iA2E8=
   dependencies:
     esbuild "^0.8.34"
     postcss "^8.2.1"
