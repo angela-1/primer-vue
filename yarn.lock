@@ -180,10 +180,10 @@
   dependencies:
     "@primer/octicons" "^9.1.1"
 
-"@primer/octicons@^11.3.0":
-  version "11.3.0"
-  resolved "https://registry.npm.taobao.org/@primer/octicons/download/@primer/octicons-11.3.0.tgz#d739204ab4e6f893ba9b7fba0d0981722c33152b"
-  integrity sha1-1zkgSrTm+JO6m3+6DQmBciwzFSs=
+"@primer/octicons@^12.0.0":
+  version "12.0.0"
+  resolved "https://registry.npm.taobao.org/@primer/octicons/download/@primer/octicons-12.0.0.tgz#cbd41af86f381bdf8303201da0d01835ecb97969"
+  integrity sha1-y9Qa+G84G9+DAyAdoNAYNey5eWk=
   dependencies:
     object-assign "^4.1.1"
 
@@ -274,10 +274,10 @@
   dependencies:
     "@types/braces" "*"
 
-"@types/node@^14.14.24":
-  version "14.14.24"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.24.tgz?cache=0&sync_timestamp=1612395948419&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.24.tgz#541c00e4f7c41c8f108bd5b045248b5224c62946"
-  integrity sha1-VBwA5PfEHI8Qi9WwRSSLUiTGKUY=
+"@types/node@^14.14.25":
+  version "14.14.25"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.25.tgz#15967a7b577ff81383f9b888aa6705d43fbbae93"
+  integrity sha1-FZZ6e1d/+BOD+biIqmcF1D+7rpM=
 
 "@vitejs/plugin-vue@^1.1.4":
   version "1.1.4"
@@ -793,11 +793,6 @@ fs-extra@^8.1.0:
     graceful-fs "^4.2.0"
     jsonfile "^4.0.0"
     universalify "^0.1.0"
-
-fsevents@~2.1.2:
-  version "2.1.3"
-  resolved "https://registry.npm.taobao.org/fsevents/download/fsevents-2.1.3.tgz#fb738703ae8d2f9fe900c33836ddebee8b97f23e"
-  integrity sha1-+3OHA66NL5/pAMM4Nt3r7ouX8j4=
 
 fsevents@~2.3.1:
   version "2.3.1"
@@ -1426,12 +1421,12 @@ rev-hash@^3.0.0:
   resolved "https://registry.npm.taobao.org/rev-hash/download/rev-hash-3.0.0.tgz#951d73d02b9606ea4bbb7ee3d93c252cd8556ce5"
   integrity sha1-lR1z0CuWBupLu37j2TwlLNhVbOU=
 
-rollup@^2.35.1:
-  version "2.38.0"
-  resolved "https://registry.npm.taobao.org/rollup/download/rollup-2.38.0.tgz#57942d5a10826cb12ed1f19c261f774efa502d2d"
-  integrity sha1-V5QtWhCCbLEu0fGcJh93TvpQLS0=
+rollup@^2.38.5:
+  version "2.38.5"
+  resolved "https://registry.npm.taobao.org/rollup/download/rollup-2.38.5.tgz?cache=0&sync_timestamp=1612505685559&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-2.38.5.tgz#be41ad4fe0c103a8794377afceb5f22b8f603d6a"
+  integrity sha1-vkGtT+DBA6h5Q3evzrXyK49gPWo=
   optionalDependencies:
-    fsevents "~2.1.2"
+    fsevents "~2.3.1"
 
 run-parallel@^1.1.9:
   version "1.1.10"
@@ -1664,17 +1659,17 @@ vite-plugin-vuedoc@^3.1.1:
     rev-hash "^3.0.0"
     slash "^3.0.0"
 
-vite@^2.0.0-beta.64:
-  version "2.0.0-beta.64"
-  resolved "https://registry.npm.taobao.org/vite/download/vite-2.0.0-beta.64.tgz#245cabc72335911d4cb704545f713d47e880d84f"
-  integrity sha1-JFyrxyM1kR1MtwRUX3E9R+iA2E8=
+vite@^2.0.0-beta.66:
+  version "2.0.0-beta.66"
+  resolved "https://registry.npm.taobao.org/vite/download/vite-2.0.0-beta.66.tgz#f9fbb3490bb235efd73366d8d0974f3e7a3e3d54"
+  integrity sha1-+fuzSQuyNe/XM2bY0JdPPno+PVQ=
   dependencies:
     esbuild "^0.8.34"
     postcss "^8.2.1"
     resolve "^1.19.0"
-    rollup "^2.35.1"
+    rollup "^2.38.5"
   optionalDependencies:
-    fsevents "~2.1.2"
+    fsevents "~2.3.1"
 
 vscode-languageserver-textdocument@^1.0.1:
   version "1.0.1"
