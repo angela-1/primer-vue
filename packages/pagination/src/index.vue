@@ -21,6 +21,7 @@
               @click="onPageChange(pageNum.num)"
               aria-label="上一页"
               class="previous_page"
+              href="javascript:void(0);"
             >
               上一页
             </a>
@@ -60,6 +61,7 @@
               @click="onPageChange(pageNum.num)"
               aria-label="下一页"
               class="next_page"
+              href="javascript:void(0);"
             >
               下一页
             </a>
@@ -76,13 +78,13 @@ import { PaginationType, PaginstionModel } from '../../types/pagination';
 export default defineComponent({
   name: 'PrPagination',
   props: {
+    pageCount: {
+      type: Number,
+      required: true
+    },
     currentPage: {
       type: Number,
       default: 1
-    },
-    pageCount: {
-      type: Number,
-      default: 0
     },
     marginPageCount: {
       type: Number,
@@ -97,7 +99,7 @@ export default defineComponent({
       default: true
     }
   },
-  emits: ['page-change'],
+  emits: ['current-change'],
   setup(props, ctx) {
     const current = ref(props.currentPage);
     /**
@@ -253,10 +255,10 @@ export default defineComponent({
     });
 
     const onPageChange = (val: number): void => {
-      console.log('page change', val);
-
+      console.log('current-change', val);
+      
       current.value = val;
-      ctx.emit('page-change', current.value);
+      ctx.emit('current-change', current.value);
     };
 
     return {

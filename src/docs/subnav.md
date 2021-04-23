@@ -7,32 +7,34 @@ desc: 'Usage of Subnav component'
 
 Simple description.
 
-
 ```vue demo
 <template>
-  <pr-subnav @change="onChange">
+  <pr-subnav v-model="currentNav" @change="onChange">
     <pr-subnav-item name="doc">文档</pr-subnav-item>
     <pr-subnav-item name="signature">签到表</pr-subnav-item>
     <pr-subnav-item name="nihao">其他</pr-subnav-item>
   </pr-subnav>
+  <p>当前选择：{{ currentNav }}</p>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
-import TheComponent from '../layouts/TheComponent.vue'
+import { defineComponent, ref } from 'vue';
+import TheComponent from '../layouts/TheComponent.vue';
 
 export default defineComponent({
   name: 'DesignSubnav',
   components: {
-    TheComponent,
+    TheComponent
   },
   setup() {
+    const currentNav = ref('doc');
     const onChange = (val: string) => {
-      console.log('recive val', val)
-    }
+      console.log('recive val', val);
+    };
     return {
+      currentNav,
       onChange
-    }
+    };
   }
-})
+});
 </script>
 ```
