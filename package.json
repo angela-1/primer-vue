@@ -18,7 +18,7 @@
     "gen:doc": "bash ./scripts/generate-doc.sh",
     "gen:entry": "node ./scripts/generate-entry.js",
     "build:dev": "vite build",
-    "build:prod": "yarn clean && vuedx-typecheck ./packages && vite build",
+    "build:prod": "yarn clean && vite build",
     "clean": "rm -rf dist"
   },
   "files": [
